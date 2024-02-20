@@ -16,11 +16,11 @@ If you're using [asdf](https://asdf-vm.com/), you should be good to go, a `.tool
 
 ## Available Scripts
 
-### build
+### Build
 
 Running `pnpm build` builds the application
 
-### dev
+### Dev
 
 Running `pnpm dev` starts the application in development mode
 
@@ -37,6 +37,13 @@ Running `pnpm lint` checks for javascript errors
 
 Running `pnpm start` starts the application in production
 
+### Storybook
+
+Running `pnpm storybook` starts Storybook
+Running `pnpm storybook:build` builds Storybook
+
+Then, open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
+
 ### Test
 
 Running `pnpm test` starts the test runner and checks all test files
@@ -46,11 +53,21 @@ Running `pnpm test:coverage` starts the test runner, checks all test files and p
 
 First, run the development server:
 
+### Run the app locally
+
 ```zsh
 pnpm dev
 ```
 
 Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Run Storybook
+
+```zsh
+pnpm storybook
+```
+
+Then, open [http://localhost:3000](http://localhost:6006) with your browser to see the result.
 
 ## Deployment
 
