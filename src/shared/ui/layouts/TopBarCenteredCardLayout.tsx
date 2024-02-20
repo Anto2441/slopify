@@ -8,18 +8,18 @@ export default function TopBarCenteredCardLayout({
   topBar,
 }: TopBarCenteredCardLayoutProps) {
   return (
-    <div className="top-bar-centered-card-layout flex flex-col h-full min-h-screen bg-gradient-to-b from-background-900 via-black to-black">
-      <div className="top-bar bg-background-950 w-full text-white h-24">
+    <div className="top-bar-centered-card-layout flex h-full min-h-screen flex-col bg-gradient-to-b from-background-900 via-black to-black">
+      <div className="top-bar h-24 w-full bg-background-950 text-white">
         {topBar}
       </div>
 
-      <div className="content grow m-8">
-        <div className="card p-8 bg-background-950 rounded-lg max-w-3xl m-auto bg-gradient-to-b from-black to-background-950">
+      <div className="content m-8 grow">
+        <div className="card m-auto max-w-3xl rounded-lg bg-background-950 bg-gradient-to-b from-black to-background-950 p-8">
           {children}
         </div>
       </div>
 
-      <div className="footer bg-background-950 p-8 text-white text-center">
+      <div className="footer bg-background-950 p-8 text-center text-white">
         Footer
       </div>
     </div>
