@@ -14,7 +14,7 @@ function renderLoginPage() {
 }
 
 describe("LoginPage", () => {
-  test("should render", () => {
+  test("should render correctly", () => {
     const { title } = renderLoginPage();
 
     expect(title()).toBeInTheDocument();
