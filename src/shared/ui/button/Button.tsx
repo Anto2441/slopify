@@ -1,26 +1,40 @@
-import { classNames } from '@/shared/utils';
+import { classNames } from "@/shared/utils";
 
 interface ButtonProps {
   className?: string;
-  label: string;
-  variant: 'primary' | 'secondary';
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  variant: "primary" | "secondary";
+  type?: "button" | "submit" | "reset";
 }
 
 export default function Button({
-  className = '',
-  label,
+  className = "",
+  children,
+  icon,
+  onClick,
+  type = "button",
   variant,
 }: ButtonProps) {
   return (
     <button
       className={classNames(
-        'px-32 py-2 rounded-full',
-        variant === 'primary' ? 'bg-primary' : '',
-        variant === 'secondary' ? 'bg-white' : '',
-        className
+        "rounded-full px-32 py-2 text-base font-bold",
+        variant === "primary" ? "bg-primary" : "",
+        variant === "secondary" ? "bg-white" : "",
+        className,
       )}
+      type={type}
+      onClick={onClick}
     >
-      {label}
+      {children}
+
+      {icon && (
+        <div className="-mr-0.5 ml-2 h-4 w-4" aria-hidden="true">
+          {icon}
+        </div>
+      )}
     </button>
   );
 }

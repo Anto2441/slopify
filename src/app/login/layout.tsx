@@ -1,4 +1,8 @@
-import { TopBarCenteredCardLayout } from '@/shared/ui/layouts';
+import {
+  Footer,
+  TopBar,
+  TopBarCenteredCardLayout,
+} from "@/shared/ui/layouts/TopBarCenteredCardLayout";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -6,7 +10,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <TopBarCenteredCardLayout topBar={<p>TopBar</p>}>
+    <TopBarCenteredCardLayout topBar={<TopBar />} footer={<Footer />}>
       {children}
     </TopBarCenteredCardLayout>
   );
