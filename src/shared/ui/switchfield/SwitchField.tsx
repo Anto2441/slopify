@@ -1,3 +1,4 @@
+import { classNames } from "@/shared/utils";
 interface SwitchFieldProps {
   className: string;
   label: string;
@@ -5,11 +6,11 @@ interface SwitchFieldProps {
 
 export default function SwitchField({ className, label }: SwitchFieldProps) {
   return (
-    <div className={className}>
+    <div className={classNames("flex items-center", className)}>
       <label>
         <input type="checkbox" />
       </label>
-      <p className="text-white ml-2">{label}</p>
+      <p className="ml-2 text-sm text-white ">{label}</p>
     </div>
   );
 }
