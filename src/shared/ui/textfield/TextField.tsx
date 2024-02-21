@@ -1,22 +1,21 @@
 interface TextFieldProps {
-  inputStyle: string;
   label: string;
-  labelStyle: string;
   placeholder: string;
-  style?: string;
+  className?: string;
 }
 
-export default function LoginField({
-  inputStyle,
+export default function TextField({
   label,
-  labelStyle,
-  style,
+  className,
   placeholder,
 }: TextFieldProps) {
   return (
-    <div className={style}>
-      <p className={labelStyle}>{label}</p>
-      <input className={inputStyle} placeholder={placeholder} />
+    <div className={className}>
+      <p className="text-white">{label}</p>
+      <input
+        className="mt-2 rounded-sm border bg-black py-2 placeholder:pl-3"
+        placeholder={placeholder}
+      />
     </div>
   );
 }
