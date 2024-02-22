@@ -21,7 +21,7 @@ export default function TopBarCenteredCardLayout({
       <div className="top-bar bg-background-950">{topBar}</div>
 
       <div className="content m-8 grow">
-        <div className="card m-auto max-w-3xl rounded-lg bg-background-950 bg-gradient-to-b from-black to-background-950 px-8 pb-10 pt-16">
+        <div className="card m-auto max-w-3xl rounded-lg bg-background-950 bg-gradient-to-b from-black to-background-950 px-8 pb-12 pt-16">
           {children}
         </div>
       </div>
