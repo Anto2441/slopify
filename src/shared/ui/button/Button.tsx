@@ -1,21 +1,35 @@
 import { classNames } from "@/shared/utils";
 
 interface ButtonProps {
-  className?: string;
+  /** The content to be displayed inside the button */
   children: React.ReactNode;
+
+  /** Additional CSS classes to apply to the button */
+  className?: string;
+
+  /** Optional icon to display next to the button text */
   icon?: React.ReactNode;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-  variant: "primary" | "secondary";
+
+  /** The type attribute for the button element */
   type?: "button" | "submit" | "reset";
+
+  /** The visual style variant of the button */
+  variant: "primary" | "secondary";
+
+  /** Optional click event handler */
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
+/**
+ * Renders a button with optional icon.
+ */
 export default function Button({
-  className = "",
   children,
+  className = "",
   icon,
-  onClick,
   type = "button",
   variant,
+  onClick,
 }: ButtonProps) {
   return (
     <button
