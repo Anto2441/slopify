@@ -6,6 +6,7 @@ interface TextFieldProps {
   label: string;
   placeholder: string;
   className?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export default function TextField({
@@ -14,6 +15,7 @@ export default function TextField({
   label,
   className,
   placeholder,
+  onChange,
 }: TextFieldProps) {
   return (
     <div className={classNames("text-white", className)}>
@@ -27,6 +29,7 @@ export default function TextField({
           id={id}
           className="block w-full rounded border bg-transparent pr-10  placeholder:text-neutral-300 focus:border-white focus:ring-white sm:text-sm"
           placeholder={placeholder}
+          onChange={onChange}
         />
         {icon && (
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
