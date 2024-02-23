@@ -1,20 +1,28 @@
+"use client";
+
 import { TextField } from "@/shared/ui/textfield";
 
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
 import { Switch } from "@/shared/ui/Switch";
 import { Button } from "@/shared/ui/button";
+import { login } from "../models";
+import SubmitButton from "./SubmitButton";
+import { useFormState } from "react-dom";
 
 /**
  * Renders the login page with a title, login form, and sign up message.
  */
 export default function LoginPage() {
+  //const loginWithAlbumId = login.bind(null, "1");
+  const [state, formAction] = useFormState(login, { errors: [] });
+
   return (
     <div className="login-page flex flex-col">
       <h1 className="text-center text-5xl font-bold text-white">
         Log in to Slopify
       </h1>
 
-      <form className="mx-auto">
+      <form action={formAction} className="mx-auto">
         <TextField
           className="mt-10"
           id="email"
@@ -40,9 +48,8 @@ export default function LoginPage() {
           value="yes"
         />
 
-        <Button className="mt-8" variant="primary" type="submit">
-          Log In
-        </Button>
+        <SubmitButton className="mt-8" variant="primary" type="submit" />
+        <pre className="text-white">{JSON.stringify(state, null, 4)}</pre>
 
         <p className="mt-8 text-center text-white underline">
           Forget your password ?
