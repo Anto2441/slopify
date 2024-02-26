@@ -23,7 +23,7 @@ interface ButtonProps {
 /**
  * Renders a button with optional icon.
  */
-export default function Button({
+export function Button({
   children,
   className = "",
   icon,
@@ -45,7 +45,7 @@ export default function Button({
       {children}
 
       {icon && (
-        <div className="-mr-0.5 ml-2 h-4 w-4" aria-hidden="true">
+        <div className="ml-2 h-4 w-4" aria-hidden="true">
           {icon}
         </div>
       )}

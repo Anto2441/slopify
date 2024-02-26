@@ -1,5 +1,5 @@
-import { LoginPage } from "@/auth/pages";
+import { SignInPage } from "@/user/pages/login";
 
-export default function LoginPageApp() {
-  return <LoginPage />;
+export default function SignInPageApp() {
+  return <SignInPage />;
 }

@@ -1,12 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TopBarCenteredCardLayout from "./TopBarCenteredCardLayout";
+import { TopBarCenteredCardLayout } from "./TopBarCenteredCardLayout";
 
 const meta = {
   args: {
     children: <h1 className="text-white">Log in to Spotify</h1>,
-    topBar: <div className="text-white">Slopify</div>,
-    footer: <p className="text-white">This site is protected by reCAPTCHA</p>,
   },
   component: TopBarCenteredCardLayout,
 } satisfies Meta<typeof TopBarCenteredCardLayout>;

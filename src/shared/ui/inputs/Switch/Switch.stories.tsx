@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Switch from "./Switch";
+import { Switch } from "./Switch";
 
 const meta = {
   component: Switch,
@@ -13,8 +13,7 @@ type Story = StoryObj<typeof meta>;
 export const Controlled: Story = {
   args: {
     checked: false,
-    description: "I'm controlled",
-    label: "Controlled switch",
+    label: "Controlled switch field",
     onChange: () => {},
   },
 };
@@ -22,8 +21,7 @@ export const Controlled: Story = {
 export const Uncontrolled: Story = {
   args: {
     defaultChecked: false,
-    description: "I'm uncontrolled",
-    label: "Uncontrolled switch",
+    label: "Uncontrolled switch field",
     name: "setting",
     value: "enabled",
   },

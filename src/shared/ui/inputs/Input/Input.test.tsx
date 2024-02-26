@@ -2,17 +2,17 @@ import { afterEach, describe, expect, test, vi } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
 
-import TextField from "./TextField";
+import { Input } from "./Input";
 
-function renderTextField({
+function renderInput({
   icon = undefined,
   id = "email",
   label = "Email or username",
   placeholder = "Enter your email",
   onChange = () => undefined,
-}: Partial<React.ComponentProps<typeof TextField>> = {}) {
+}: Partial<React.ComponentProps<typeof Input>> = {}) {
   render(
-    <TextField
+    <Input
       icon={icon}
       id={id}
       label={label}
@@ -35,7 +35,7 @@ function renderTextField({
 
 describe("<TextField />", () => {
   test("should render correctly", () => {
-    const { $icon, $label, $input } = renderTextField();
+    const { $icon, $label, $input } = renderInput();
 
     expect($input()).toBeInTheDocument();
     expect($input()).toHaveAttribute("placeholder", "Enter your email");
@@ -46,7 +46,7 @@ describe("<TextField />", () => {
   });
 
   test("label should render the correct text", () => {
-    const { $label } = renderTextField({ label: "expected label" });
+    const { $label } = renderInput({ label: "expected label" });
 
     expect($label()).toHaveTextContent("expected label");
   });
@@ -54,7 +54,7 @@ describe("<TextField />", () => {
   test("should render the icon", () => {
     const expectedTitle = "icon title";
 
-    const { $icon } = renderTextField({
+    const { $icon } = renderInput({
       icon: <EyeSlashIcon title={expectedTitle} />,
     });
 
@@ -63,7 +63,7 @@ describe("<TextField />", () => {
 
   test("It should return ?toto!", () => {
     const mockOnChange = vi.fn();
-    const { $input } = renderTextField({ onChange: mockOnChange });
+    const { $input } = renderInput({ onChange: mockOnChange });
 
     expect($input()).toHaveDisplayValue("");
 
