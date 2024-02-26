@@ -1,7 +1,9 @@
+import { HomePage } from "@/library/pages/home";
+
 export default function Home() {
   return (
     <main>
-      <h1>HomePage</h1>
+      <HomePage />
     </main>
   );
 }
