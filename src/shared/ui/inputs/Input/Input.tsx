@@ -1,6 +1,6 @@
 import { classNames } from "@/shared/utils";
 
-interface TextFieldProps {
+interface InputProps {
   icon?: React.ReactNode;
   id: string;
   label: string;
@@ -9,14 +9,14 @@ interface TextFieldProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export default function TextField({
+export function Input({
   icon,
   id,
   label,
   className,
   placeholder,
   onChange,
-}: TextFieldProps) {
+}: InputProps) {
   return (
     <div className={classNames("text-white", className)}>
       <label htmlFor={id} className="block text-sm font-bold">

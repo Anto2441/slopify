@@ -1,10 +1,10 @@
 import { describe, expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
 
-import LoginPage from "./LoginPage";
+import { SignInPage } from "./SignInPage";
 
-function renderLoginPage() {
-  render(<LoginPage />);
+function renderPage() {
+  render(<SignInPage />);
 
   const title = () => screen.queryByRole("heading", { level: 1 });
 
@@ -13,9 +13,9 @@ function renderLoginPage() {
   };
 }
 
-describe("LoginPage", () => {
+describe("SignInPage", () => {
   test("should render correctly", () => {
-    const { title } = renderLoginPage();
+    const { title } = renderPage();
 
     expect(title()).toBeInTheDocument();
   });

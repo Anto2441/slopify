@@ -1,8 +1,8 @@
-import { afterEach, describe, expect, test, vi } from "vitest";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
-
-import Button from "./Button";
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, test, vi } from "vitest";
+
+import { Button } from "./Button";
 
 function renderButton({
   children = "Test button",

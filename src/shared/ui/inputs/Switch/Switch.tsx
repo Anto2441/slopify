@@ -80,7 +80,7 @@ type SwitchProps = CommonProps &
  * - Controlled: `checked` and `onChange` props are managed externally.
  * - Uncontrolled: `defaultChecked` sets the initial state, and `name` and `value` are used within forms.
  */
-export default function Switch({
+export function Switch({
   checked,
   className,
   defaultChecked,

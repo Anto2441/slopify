@@ -2,11 +2,10 @@ import { render, fireEvent, screen, cleanup } from "@testing-library/react";
 import React from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import Switch from "./Switch";
+import { Switch } from "./Switch";
 
 function renderSwitch({
   checked = undefined,
-  description = undefined,
   defaultChecked = undefined,
   label = "Test switch",
   name = undefined,
@@ -15,7 +14,6 @@ function renderSwitch({
 }: Partial<React.ComponentProps<typeof Switch>> = {}) {
   const controlledProps = {
     checked: checked ?? false,
-    description,
     label,
     name,
     value,
@@ -23,7 +21,6 @@ function renderSwitch({
   };
   const uncontrolledProps = {
     defaultChecked: defaultChecked ?? false,
-    description,
     label,
     name: name ?? "",
     value: value ?? "",
@@ -37,11 +34,8 @@ function renderSwitch({
 
   const $switch = () => screen.queryByRole("switch");
   const $label = () => screen.queryByLabelText(label);
-  const $description = () =>
-    description ? screen.queryByText(description) : null;
 
   return {
-    $description,
     $label,
     $switch,
   };
@@ -49,21 +43,13 @@ function renderSwitch({
 
 describe("<Switch />", () => {
   it("renders correctly", () => {
-    const { $description, $label, $switch } = renderSwitch();
+    const { $label, $switch } = renderSwitch();
 
     expect($switch()).toBeInTheDocument();
     expect($switch()).not.toBeChecked();
     expect($switch()).toHaveAttribute("data-headlessui-state", "");
 
     expect($label()).toBeInTheDocument();
-
-    expect($description()).not.toBeInTheDocument();
-  });
-
-  it("renders the description", () => {
-    const { $description } = renderSwitch({ description: "Test description" });
-
-    expect($description()).toBeInTheDocument();
   });
 
   it("renders with the correct initial state based on the `checked` prop", () => {
