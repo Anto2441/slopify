@@ -1,6 +1,6 @@
 "use client";
 
-import { EyeSlashIcon } from "@heroicons/react/24/solid";
+import { EyeSlashIcon } from "@heroicons/react/24/outline";
 
 import { Input, Switch } from "@/shared/ui";
 
@@ -27,7 +27,10 @@ export function SignInForm() {
       <Input
         className="mt-4"
         icon={
-          <EyeSlashIcon className="size-5 text-gray-400" aria-hidden="true" />
+          <EyeSlashIcon
+            className="size-5 text-neutral-400"
+            aria-hidden="true"
+          />
         }
         id="password"
         label="Password"

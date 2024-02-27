@@ -101,7 +101,7 @@ export function Switch({
         <HeadlessSwitch
           checked={checked}
           className={classNames(
-            "ui-checked:bg-primary ui-not-checked:bg-background-500 relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-background-950",
+            "ui-checked:bg-accent-500 relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-not-checked:bg-neutral-500",
           )}
           defaultChecked={defaultChecked}
           name={name}
@@ -113,7 +113,7 @@ export function Switch({
           <span
             aria-hidden="true"
             className={classNames(
-              "ui-checked:translate-x-3.5 ui-not-checked:translate-x-0.5 pointer-events-none inline-block size-3 transform rounded-full bg-background-950 shadow-lg ring-0 transition-transform duration-200 ease-in-out",
+              "pointer-events-none inline-block size-3 transform rounded-full bg-black shadow-lg ring-0 transition-transform duration-200 ease-in-out ui-checked:translate-x-3.5 ui-not-checked:translate-x-0.5",
             )}
           />
         </HeadlessSwitch>

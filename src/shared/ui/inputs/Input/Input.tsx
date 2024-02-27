@@ -27,7 +27,7 @@ export function Input({
           type="text"
           name={id}
           id={id}
-          className="block w-full rounded border bg-transparent pr-10  placeholder:text-neutral-300 focus:border-white focus:ring-white sm:text-sm"
+          className="block w-full rounded border bg-neutral-950 pr-10 placeholder:text-neutral-300 focus:border-white focus:ring-white sm:text-sm"
           placeholder={placeholder}
           onChange={onChange}
         />
