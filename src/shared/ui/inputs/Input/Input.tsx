@@ -1,4 +1,4 @@
-import { classNames } from "@/shared/utils";
+import { twJoin } from "tailwind-merge";
 
 interface InputProps {
   icon?: React.ReactNode;
@@ -18,7 +18,7 @@ export function Input({
   onChange,
 }: InputProps) {
   return (
-    <div className={classNames("text-white", className)}>
+    <div className={twJoin("text-white", className)}>
       <label htmlFor={id} className="block text-sm font-bold">
         {label}
       </label>

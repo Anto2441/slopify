@@ -2,7 +2,7 @@
 
 import { Switch as HeadlessSwitch } from "@headlessui/react";
 
-import { classNames } from "@/shared/utils";
+import { twJoin } from "tailwind-merge";
 
 type CommonProps = {
   /**
@@ -93,15 +93,15 @@ export function Switch({
   return (
     <HeadlessSwitch.Group>
       <div
-        className={classNames(
+        className={twJoin(
           "grid-row-2 grid auto-cols-max grid-flow-col gap-x-3 gap-y-1 text-white",
           className,
         )}
       >
         <HeadlessSwitch
           checked={checked}
-          className={classNames(
-            "ui-checked:bg-accent-500 relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-not-checked:bg-neutral-500",
+          className={twJoin(
+            "relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-checked:bg-accent-500 ui-not-checked:bg-neutral-500",
           )}
           defaultChecked={defaultChecked}
           name={name}
@@ -112,7 +112,7 @@ export function Switch({
 
           <span
             aria-hidden="true"
-            className={classNames(
+            className={twJoin(
               "pointer-events-none inline-block size-3 transform rounded-full bg-black shadow-lg ring-0 transition-transform duration-200 ease-in-out ui-checked:translate-x-3.5 ui-not-checked:translate-x-0.5",
             )}
           />

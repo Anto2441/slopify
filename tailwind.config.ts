@@ -107,6 +107,12 @@ const config: Config = {
       white: colors.white,
     },
 
+    extend: {
+      screens: {
+        xs: "480px",
+      },
+    },
+
     fontFamily: {
       sans: ["var(--font-figtree)"],
     },

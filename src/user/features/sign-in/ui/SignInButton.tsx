@@ -1,5 +1,6 @@
 "use client";
 
+import { twJoin } from "tailwind-merge";
 import { Button } from "@/shared/ui";
 import { useFormStatus } from "react-dom";
 
@@ -12,7 +13,11 @@ export function SignInButton({ className }: SignInButtonProps) {
 
   return (
     // TODO: Update Button to use all props of native <button /> element
-    <Button className={className} type="submit" variant="primary">
+    <Button
+      className={twJoin(className, "w-full")}
+      type="submit"
+      variant="primary"
+    >
       {pending ? "Log In…" : "Log In"}
     </Button>
   );
