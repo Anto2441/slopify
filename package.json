@@ -10,7 +10,7 @@
     "format:write": "prettier . --write",
     "lint": "next lint",
     "start": "next start",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build",
     "test": "vitest",
     "test:coverage": "vitest --coverage"
@@ -28,7 +28,6 @@
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
     "@storybook/nextjs": "^7.6.17",
     "@storybook/react": "^7.6.17",

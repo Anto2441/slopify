@@ -67,7 +67,7 @@ Then, open [http://localhost:3000](http://localhost:3000) with your browser to s
 pnpm storybook
 ```
 
-Then, open [http://localhost:3000](http://localhost:6006) with your browser to see the result.
+Then, open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
 
 ## Deployment
 

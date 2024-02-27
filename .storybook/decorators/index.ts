@@ -1,0 +1,1 @@
+export { WithTailwind } from "./WithTailwind";

@@ -1,8 +1,10 @@
 import type { Preview } from "@storybook/react";
 
-import "../src/app/globals.css";
+import { WithTailwind } from "./decorators";
 
 const preview: Preview = {
+  decorators: [WithTailwind],
+
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
 
@@ -12,6 +14,10 @@ const preview: Preview = {
 
         date: /Date$/i,
       },
+    },
+
+    nextjs: {
+      appDirectory: true,
     },
   },
 };

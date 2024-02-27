@@ -34,8 +34,8 @@ export function Button({
   return (
     <button
       className={classNames(
-        "rounded-full px-32 py-2 text-base font-bold",
-        variant === "primary" ? "bg-primary" : "",
+        "rounded-full px-32 py-2 text-base font-bold text-black",
+        variant === "primary" ? "bg-accent-500" : "",
         variant === "secondary" ? "bg-white" : "",
         className,
       )}
