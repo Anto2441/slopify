@@ -21,7 +21,7 @@ export function SignInForm() {
       />
 
       {state.errors?.email && (
-        <p className="mt-2 text-red-500">{state.errors.email}</p>
+        <p className="text-red-500 mt-2">{state.errors.email}</p>
       )}
 
       <Input
@@ -38,7 +38,7 @@ export function SignInForm() {
       />
 
       {state.errors?.password && (
-        <p className="mt-2 text-red-500">{state.errors.password}</p>
+        <p className="text-red-500 mt-2">{state.errors.password}</p>
       )}
 
       <Switch

@@ -26,8 +26,8 @@ Running `pnpm dev` starts the application in development mode
 
 ### Format
 
-Running `pnpm format:check` checks for incorrect file formating
-Running `pnpm format:write` fixes incorrect file formating
+Running `pnpm format --check` checks for incorrect file formating
+Running `pnpm format --write` fixes incorrect file formating
 
 ### Lint
 
@@ -47,7 +47,7 @@ Then, open [http://localhost:6006](http://localhost:6006) with your browser to s
 ### Test
 
 Running `pnpm test` starts the test runner and checks all test files
-Running `pnpm test:coverage` starts the test runner, checks all test files and print the test coverage.
+Running `pnpm test --coverage` starts the test runner, checks all test files and print the test coverage.
 
 ## Development
 
