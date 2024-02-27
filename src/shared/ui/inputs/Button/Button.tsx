@@ -1,4 +1,4 @@
-import { classNames } from "@/shared/utils";
+import { twMerge } from "tailwind-merge";
 
 interface ButtonProps {
   /** The content to be displayed inside the button */
@@ -14,7 +14,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
 
   /** The visual style variant of the button */
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
 
   /** Optional click event handler */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -33,8 +33,8 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
-      className={classNames(
-        "rounded-full px-32 py-2 text-base font-bold text-black",
+      className={twMerge(
+        "rounded-full px-8 py-2 text-base font-bold text-black",
         variant === "primary" ? "bg-accent-500" : "",
         variant === "secondary" ? "bg-white" : "",
         className,
