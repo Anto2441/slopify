@@ -33,7 +33,7 @@ describe("<Button />", () => {
     const { $button, $children, $icon } = renderButton();
 
     expect($button()).toBeInTheDocument();
-    expect($button()).toHaveClass("bg-primary");
+    expect($button()).toHaveClass("bg-accent-500");
 
     expect($children()).toBeInTheDocument();
 

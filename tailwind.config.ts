@@ -64,7 +64,7 @@ const config: Config = {
         600: "#5d5d5d",
         700: "#4f4f4f",
         800: "#454545",
-        900: "#3d3d3d",
+        900: "#242424",
         950: "#121212",
         current: colors.current,
         transparent: colors.transparent,
