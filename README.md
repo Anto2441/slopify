@@ -33,6 +33,10 @@ Running `pnpm format --write` fixes incorrect file formating
 
 Running `pnpm lint` checks for javascript errors
 
+### Types
+
+Running `pnpm types` checks for type errors
+
 ### Start
 
 Running `pnpm start` starts the application in production

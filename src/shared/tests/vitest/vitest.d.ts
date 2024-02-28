@@ -6,7 +6,6 @@
  */
 
 import { TestingLibraryMatchers } from "@testing-library/jest-dom/matchers";
-import type { Assertion, AsymmetricMatchersContaining } from "vitest";
 
 /**
  * CustomMatchers interface extends the matchers from @testing-library/jest-dom
@@ -29,7 +28,7 @@ declare module "vitest" {
    *
    * @template T The type of the actual value being compared in the assertions.
    */
-  interface Assertion<T = any> extends CustomMatchers<T> {}
+  interface Assertion<T = unknown> extends CustomMatchers<T> {}
 
   /**
    * Extends Vitest's AsymmetricMatchersContaining interface with custom matchers to allow
