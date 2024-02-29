@@ -4,7 +4,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export function NavBar() {
   return (
-    <div className="flex items-center justify-between px-5 py-4">
+    <div className="flex items-center justify-between rounded-t-lg px-5 py-4">
       <nav>
         <ul className="flex space-x-4">
           <li>

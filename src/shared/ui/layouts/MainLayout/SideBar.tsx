@@ -8,7 +8,7 @@ import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 export function SideBar() {
   return (
-    <nav className="flex h-full w-[345px] shrink-0 flex-col p-2">
+    <nav className="flex h-full w-[345px] shrink-0 flex-col">
       <Paper className="shrink-0 px-6 py-5">
         <div className="flex font-bold text-white">
           <Image width={28} height={28} src="/logo.png" alt="Slopify logo" />
@@ -37,7 +37,7 @@ export function SideBar() {
         </ul>
       </Paper>
 
-      <Paper className="mt-2 flex grow flex-col overflow-hidden pt-4">
+      <Paper className="mt-2 flex grow flex-col overflow-hidden rounded-b-none pt-4">
         <header className="flex justify-between px-6 pb-2">
           <a href="" className="flex items-center">
             <RectangleStackIcon
