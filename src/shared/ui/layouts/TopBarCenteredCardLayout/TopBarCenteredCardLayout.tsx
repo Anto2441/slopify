@@ -1,5 +1,5 @@
-import { TopBar } from "./TopBar";
 import { Footer } from "./Footer";
+import { TopBar } from "./TopBar";
 
 interface TopBarCenteredCardLayoutProps {
   /** Content to be displayed at the center of the layout */

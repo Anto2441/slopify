@@ -3,7 +3,6 @@
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
 
 import { Input, Switch } from "@/shared/ui";
-
 import { SignInButton } from "@/user/features/sign-in";
 
 import { useSignInForm } from "../model/useSignInForm";

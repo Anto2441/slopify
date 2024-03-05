@@ -1,6 +1,6 @@
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
 import { Button, IconButton } from "@/shared/ui";
-import { ChevronLeftIcon } from "@heroicons/react/24/outline";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export function NavBar() {
   return (

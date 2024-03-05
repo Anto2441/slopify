@@ -1,7 +1,10 @@
+import {
+  BoltIcon,
+  CameraIcon,
+  LightBulbIcon,
+} from "@heroicons/react/24/outline";
+
 import { IconButton } from "@/shared/ui";
-import { CameraIcon } from "@heroicons/react/24/outline";
-import { BoltIcon } from "@heroicons/react/24/outline";
-import { LightBulbIcon } from "@heroicons/react/24/outline";
 
 export function MainFooter() {
   return (

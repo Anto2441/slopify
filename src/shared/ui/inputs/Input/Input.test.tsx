@@ -1,6 +1,6 @@
-import { afterEach, describe, expect, test, vi } from "vitest";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, test, vi } from "vitest";
 
 import { Input } from "./Input";
 

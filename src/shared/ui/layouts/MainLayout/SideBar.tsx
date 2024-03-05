@@ -1,10 +1,13 @@
+import {
+  GlobeAltIcon,
+  HomeIcon,
+  MagnifyingGlassIcon,
+  PlusIcon,
+  RectangleStackIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
+
 import { Button, IconButton, Paper } from "@/shared/ui";
-import { HomeIcon } from "@heroicons/react/24/outline";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { RectangleStackIcon } from "@heroicons/react/24/outline";
-import { PlusIcon } from "@heroicons/react/24/outline";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 export function SideBar() {
   return (
