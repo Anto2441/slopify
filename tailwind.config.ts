@@ -1,115 +1,120 @@
 import { type Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
-const config: Config = {
+const config = {
   content: ["./src/**/*.{ts,tsx}"],
 
   theme: {
-    colors: {
-      accent: {
-        50: "#f0fdf4",
-        100: "#dbfde7",
-        200: "#b9f9ce",
-        300: "#82f3aa",
-        400: "#45e37d",
-        500: "#1ed760",
-        600: "#11a847",
-        700: "#11843b",
-        800: "#136832",
-        900: "#12552c",
-        950: "#042f16",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      danger: {
-        50: "#fff1f2",
-        100: "#ffe0e3",
-        200: "#ffc6cc",
-        300: "#ff9ea8",
-        400: "#ff6675",
-        500: "#fd364a",
-        600: "#e91429",
-        700: "#c60f21",
-        800: "#a3111f",
-        900: "#871520",
-        950: "#4a050c",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      info: {
-        50: "#eef9ff",
-        100: "#d8f2ff",
-        200: "#bae7ff",
-        300: "#8adbff",
-        400: "#53c6ff",
-        500: "#2ba7ff",
-        600: "#148afc",
-        700: "#0d72ea",
-        800: "#125abb",
-        900: "#154f93",
-        950: "#123059",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      neutral: {
-        50: "#f6f6f6",
-        100: "#e7e7e7",
-        200: "#d1d1d1",
-        300: "#b0b0b0",
-        400: "#888888",
-        500: "#6a6a6a",
-        600: "#5d5d5d",
-        700: "#4f4f4f",
-        800: "#454545",
-        900: "#242424",
-        950: "#121212",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      success: {
-        50: "#f0fdf4",
-        100: "#dbfde7",
-        200: "#b9f9ce",
-        300: "#82f3aa",
-        400: "#45e37d",
-        500: "#1ed760",
-        600: "#11a847",
-        700: "#11843b",
-        800: "#136832",
-        900: "#12552c",
-        950: "#042f16",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      warning: {
-        50: "#fff8eb",
-        100: "#ffebc6",
-        200: "#ffd588",
-        300: "#ffba4a",
-        400: "#ffa42b",
-        500: "#f97b07",
-        600: "#dd5602",
-        700: "#b73806",
-        800: "#942b0c",
-        900: "#7a240d",
-        950: "#461002",
-        current: colors.current,
-        transparent: colors.transparent,
-      },
-
-      black: colors.black,
-
-      white: colors.white,
-    },
-
     extend: {
-      screens: {
-        xs: "480px",
+      borderRadius: {
+        "corner-radius-smaller": "var(--corner-radius-smaller)",
+        "corner-radius-base": "var(--corner-radius-base)",
+        "corner-radius-larger": "var(--corner-radius-larger)",
+        "corner-radius-larger-2": "var(--corner-radius-larger-2)",
+        "corner-radius-larger-3": "var(--corner-radius-larger-3)",
+      },
+
+      borderWidth: {
+        "border-width-hairline": "var(--border-width-hairline)",
+        "border-width-thin": "var(--border-width-thin)",
+        "border-width-thick": "var(--border-width-thick)",
+        "border-width-thicker": "var(--border-width-thicker)",
+        "border-width-focus": "var(--border-width-focus)",
+      },
+
+      colors: {
+        "background-base": "var(--background-base)",
+        "background-highlight": "var(--background-highlight)",
+        "background-press": "var(--background-press)",
+        "background-elevated-base": "var(--background-elevated-base)",
+        "background-elevated-highlight": "var(--background-elevated-highlight)",
+        "background-elevated-press": "var(--background-elevated-press)",
+        "background-tinted-base": "var(--background-tinted-base)",
+        "background-tinted-highlight": "var(--background-tinted-highlight)",
+        "background-tinted-press": "var(--background-tinted-press)",
+
+        "text-base": "var(--text-base)",
+        "text-subdued": "var(--text-subdued)",
+        "text-bright-accent": "var(--text-bright-accent)",
+        "text-negative": "var(--text-negative)",
+        "text-warning": "var(--text-warning)",
+        "text-positive": "var(--text-positive)",
+        "text-announcement": "var(--text-announcement)",
+
+        "essential-base": "var(--essential-base)",
+        "essential-subdued": "var(--essential-subdued)",
+        "essential-bright-accent": "var(--essential-bright-accent)",
+        "essential-negative": "var(--essential-negative)",
+        "essential-warning": "var(--essential-warning)",
+        "essential-positive": "var(--essential-positive)",
+        "essential-announcement": "var(--essential-announcement)",
+
+        "decorative-base": "var(--decorative-base)",
+        "decorative-subdued": "var(--decorative-subdued)",
+      },
+
+      fontSize: {
+        "text-size-smaller-2": "var(--text-size-smaller-2)",
+        "text-size-smaller": "var(--text-size-smaller)",
+        "text-size-base": "var(--text-size-base)",
+        "text-size-larger": "var(--text-size-larger)",
+        "text-size-larger-2": "var(--text-size-larger-2)",
+        "text-size-larger-3": "var(--text-size-larger-3)",
+        "text-size-larger-4": "var(--text-size-larger-4)",
+        "text-size-larger-5": "var(--text-size-larger-5)",
+      },
+
+      spacing: {
+        "control-size-smaller": "var(--control-size-smaller)",
+        "control-size-base": "var(--control-size-base)",
+        "control-size-larger": "var(--control-size-larger)",
+
+        "graphic-size-decorative-smaller-2":
+          "var(--graphic-size-decorative-smaller-2)",
+        "graphic-size-decorative-smaller":
+          "var(--graphic-size-decorative-smaller)",
+        "graphic-size-decorative-base": "var(--graphic-size-decorative-base)",
+        "graphic-size-decorative-larger":
+          "var(--graphic-size-decorative-larger)",
+        "graphic-size-decorative-larger-2":
+          "var(--graphic-size-decorative-larger-2)",
+        "graphic-size-decorative-larger-3":
+          "var(--graphic-size-decorative-larger-3)",
+        "graphic-size-decorative-larger-4":
+          "var(--graphic-size-decorative-larger-4)",
+        "graphic-size-decorative-larger-5":
+          "var(--graphic-size-decorative-larger-5)",
+        "graphic-size-informative-smaller-2":
+          "var(--graphic-size-informative-smaller-2)",
+        "graphic-size-informative-smaller":
+          "var(--graphic-size-informative-smaller)",
+        "graphic-size-informative-base": "var(--graphic-size-informative-base)",
+        "graphic-size-informative-larger":
+          "var(--graphic-size-informative-larger)",
+        "graphic-size-informative-larger-2":
+          "var(--graphic-size-informative-larger-2)",
+        "graphic-size-informative-larger-3":
+          "var(--graphic-size-informative-larger-3)",
+        "graphic-size-informative-larger-4":
+          "var(--graphic-size-informative-larger-4)",
+        "graphic-size-informative-larger-5":
+          "var(--graphic-size-informative-larger-5)",
+
+        "layout-margin-tighter": "var(--layout-margin-tighter)",
+        "layout-margin-base": "var(--layout-margin-base)",
+        "layout-margin-looser": "var(--layout-margin-looser)",
+
+        "spacing-tighter-5": "var(--spacing-tighter-5)",
+        "spacing-tighter-4": "var(--spacing-tighter-4)",
+        "spacing-tighter-3": "var(--spacing-tighter-3)",
+        "spacing-tighter-2": "var(--spacing-tighter-2)",
+        "spacing-tighter": "var(--spacing-tighter)",
+        "spacing-base": "var(--spacing-base)",
+        "spacing-looser": "var(--spacing-looser)",
+        "spacing-looser-2": "var(--spacing-looser-2)",
+        "spacing-looser-3": "var(--spacing-looser-3)",
+        "spacing-looser-4": "var(--spacing-looser-4)",
+        "spacing-looser-5": "var(--spacing-looser-5)",
+        "spacing-looser-6": "var(--spacing-looser-6)",
       },
     },
 
@@ -119,6 +124,6 @@ const config: Config = {
   },
 
   plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")],
-};
+} satisfies Config;
 
 export default config;

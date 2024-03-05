@@ -9,119 +9,115 @@ import { GlobeAltIcon } from "@heroicons/react/24/outline";
 export function SideBar() {
   return (
     <nav className="flex h-full w-[345px] shrink-0 flex-col">
-      <Paper className="shrink-0 px-6 py-5">
-        <div className="flex font-bold text-white">
+      <Paper className="shrink-0">
+        <div className="flex pl-spacing-base font-bold text-text-base">
           <Image width={28} height={28} src="/logo.png" alt="Slopify logo" />
-          <p className="ml-0.5">Slopify</p>
+
+          <span className="ml-spacing-tighter-5">Slopify</span>
         </div>
 
-        <ul className="mt-5 space-y-5">
+        <ul className="mt-spacing-tighter space-y-spacing-base px-spacing-base py-spacing-tighter-2 text-text-subdued">
           <li>
-            <a href="" className="flex items-center">
-              <HomeIcon
-                className="size-6 text-neutral-300"
-                aria-hidden="true"
-              />
-              <p className="ml-4 font-bold text-neutral-300">Accueil</p>
+            <a
+              href="#"
+              className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
+            >
+              <HomeIcon className="size-6" />
+
+              <span className="ml-spacing-base">Accueil</span>
             </a>
           </li>
+
           <li>
-            <a href="" className="flex items-center">
-              <MagnifyingGlassIcon
-                className="size-6 text-neutral-300"
-                aria-hidden="true"
-              />
-              <p className="ml-4 font-bold text-neutral-300">Rechercher</p>
+            <a
+              href="#"
+              className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
+            >
+              <MagnifyingGlassIcon className="size-6" />
+
+              <span className="ml-spacing-base">Rechercher</span>
             </a>
           </li>
         </ul>
       </Paper>
 
-      <Paper className="mt-2 flex grow flex-col overflow-hidden rounded-b-none pt-4">
-        <header className="flex justify-between px-6 pb-2">
-          <a href="" className="flex items-center">
-            <RectangleStackIcon
-              className="size-6 text-neutral-300"
-              aria-hidden="true"
-            />
-            <p className="ml-4 font-bold text-neutral-300">Bibliothèque</p>
+      <Paper className="mt-2 flex grow flex-col overflow-hidden pt-spacing-base">
+        <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
+          <a
+            href="#"
+            className="inline-flex items-center font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
+          >
+            <RectangleStackIcon className="size-6" />
+
+            <span className="ml-spacing-tighter">Bibliothèque</span>
           </a>
+
           <IconButton
-            icon={
-              <PlusIcon
-                className="size-6 text-neutral-400"
-                aria-hidden="true"
-              />
-            }
+            icon={<PlusIcon className="size-6 text-text-subdued" />}
           />
         </header>
 
-        <div className="grow overflow-scroll">
-          <Paper elevation={2} className="mx-2 my-4 p-4">
+        <div className="grow space-y-spacing-looser overflow-scroll">
+          <Paper className="px-spacing-base py-spacing-base" elevation={2}>
             <span className="block font-bold">
               Créez votre première playlist
             </span>
-            <span className=" mt-1 block text-sm">
+
+            <span className=" mt-spacing-tighter-2 block text-sm">
               C&apos;est simple nous allons vous aider
             </span>
-            <Button variant="secondary" className="mt-4 px-4 text-sm">
+
+            <Button
+              theme="inverted-light"
+              className="mt-spacing-looser px-spacing-base py-spacing-tighter-4 text-sm"
+            >
               Créer une playlist
             </Button>
           </Paper>
 
-          <Paper elevation={2} className="mx-2 mt-6 p-4">
+          <Paper className="px-spacing-base py-spacing-base" elevation={2}>
             <span className="block font-bold">
               Cherchons quelques podcasts auxquels vous abonner
             </span>
-            <span className=" mt-1 block text-sm">
+
+            <span className="mt-spacing-tighter-2 block text-sm">
               Nous vous transmettrons des informations sur les nouveaux épisodes
             </span>
-            <Button variant="secondary" className="mt-4 px-4 text-sm">
+
+            <Button
+              theme="inverted-light"
+              className="mt-spacing-looser px-spacing-base py-spacing-tighter-4 text-sm"
+            >
               Parcourir les podcasts
             </Button>
           </Paper>
         </div>
-      </Paper>
 
-      <footer className="shrink-0 rounded-b-lg bg-neutral-950 pb-8">
-        <div className="shrink-0 p-6">
-          <div className="flex-wrap">
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Légal
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Centre de sécurité et de confidentialité
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Protection des données
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Paramètre des cookies
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              À propos des pubs
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Accessibilité
-            </a>
-            <a href="" className="mr-4 text-xs font-semibold text-neutral-300">
-              Cookies
-            </a>
+        <footer className="p-spacing-looser">
+          <div className="mb-spacing-looser flex flex-wrap gap-spacing-tighter text-xs text-text-subdued">
+            <a href="#">Légal</a>
+
+            <a href="#">Centre de sécurité et de confidentialité</a>
+
+            <a href="#">Protection des données</a>
+
+            <a href="#">Paramètre des cookies</a>
+
+            <a href="#">À propos des pubs</a>
+
+            <a href="#">Accessibilité</a>
+
+            <a href="#">Cookies</a>
           </div>
-        </div>
 
-        <Button
-          className="ml-4 flex flex-row-reverse items-center border px-3 py-1 text-sm text-white"
-          icon={
-            <GlobeAltIcon
-              className="mr-1 size-5 text-white"
-              aria-hidden="true"
-            />
-          }
-        >
-          Français
-        </Button>
-      </footer>
+          <Button
+            className="flex flex-row-reverse items-center border border-essential-subdued p-spacing-base py-spacing-tighter-4 text-sm text-text-base"
+            icon={<GlobeAltIcon className="mr-spacing-tighter-4 size-5" />}
+          >
+            Français
+          </Button>
+        </footer>
+      </Paper>
     </nav>
   );
 }

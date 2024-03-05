@@ -14,7 +14,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
 
   /** The visual style variant of the button */
-  variant?: "primary" | "secondary";
+  theme?: "accent" | "inverted-light";
 
   /** Optional click event handler */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -27,16 +27,18 @@ export function Button({
   children,
   className = "",
   icon,
+  theme,
   type = "button",
-  variant,
   onClick,
 }: ButtonProps) {
   return (
     <button
       className={twMerge(
-        "rounded-full px-8 py-2 text-base font-bold text-black",
-        variant === "primary" ? "bg-accent-500" : "",
-        variant === "secondary" ? "bg-white" : "",
+        "min-h-control-size-smaller rounded-full bg-background-base px-spacing-looser-2 py-spacing-tighter-2 font-bold leading-tight text-text-base hover:bg-background-highlight active:bg-background-press",
+        theme === "accent" && "theme-accent",
+        theme === "inverted-light" && "theme-inverted-light",
+        !theme &&
+          "bg-transparent text-text-subdued hover:bg-transparent hover:text-text-base",
         className,
       )}
       type={type}

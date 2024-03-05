@@ -14,20 +14,16 @@ export function TopBarCenteredCardLayout({
   children,
 }: TopBarCenteredCardLayoutProps) {
   return (
-    <div className="top-bar-centered-card-layout flex h-full min-h-screen flex-col">
-      <div className="top-bar bg-neutral-950">
-        <TopBar />
-      </div>
+    <div className="flex h-full min-h-screen flex-col bg-background-base">
+      <TopBar />
 
-      <div className="content grow bg-gradient-to-b from-white/10 from-0% to-black md:p-8">
-        <div className="card m-auto max-w-3xl rounded-lg bg-neutral-950 px-8 pb-12 pt-16">
+      <div className="grow bg-gradient-to-b from-white/10 to-black md:p-spacing-looser-2">
+        <div className="m-auto rounded-lg bg-background-base px-8 pb-12 pt-16 md:max-w-2xl">
           {children}
         </div>
       </div>
 
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
