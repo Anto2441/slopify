@@ -1,7 +1,8 @@
 "use client";
 
-import { Button } from "@/shared/ui";
 import { useFormStatus } from "react-dom";
+
+import { Button } from "@/shared/ui";
 
 interface SignInButtonProps {
   /** Additional CSS classes to apply to the button */

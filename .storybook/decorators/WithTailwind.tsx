@@ -1,5 +1,4 @@
 import { type Decorator } from "@storybook/react";
-import React from "react";
 
 import { figtree } from "@/app/fonts";
 
