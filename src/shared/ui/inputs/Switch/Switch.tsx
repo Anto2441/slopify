@@ -94,14 +94,14 @@ export function Switch({
     <HeadlessSwitch.Group>
       <div
         className={twJoin(
-          "grid-row-2 grid auto-cols-max grid-flow-col gap-x-3 gap-y-1 text-white",
+          "grid-row-2 grid auto-cols-max grid-flow-col gap-x-spacing-tighter gap-y-spacing-tighter-4 text-text-base",
           className,
         )}
       >
         <HeadlessSwitch
           checked={checked}
           className={twJoin(
-            "relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-checked:bg-accent-500 ui-not-checked:bg-neutral-500",
+            "relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-checked:bg-essential-bright-accent ui-not-checked:bg-essential-subdued",
           )}
           defaultChecked={defaultChecked}
           name={name}
@@ -118,7 +118,9 @@ export function Switch({
           />
         </HeadlessSwitch>
 
-        <HeadlessSwitch.Label className="text-sm">{label}</HeadlessSwitch.Label>
+        <HeadlessSwitch.Label className="text-sm font-semibold">
+          {label}
+        </HeadlessSwitch.Label>
 
         {description && (
           <HeadlessSwitch.Description className="text-xs">

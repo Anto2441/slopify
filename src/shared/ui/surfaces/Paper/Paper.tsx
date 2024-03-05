@@ -1,4 +1,4 @@
-import { twJoin } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 
 interface PaperProps {
   /** The content to be displayed inside the Paper */
@@ -15,10 +15,10 @@ interface PaperProps {
 export function Paper({ children, className, elevation = 1 }: PaperProps) {
   return (
     <div
-      className={twJoin(
-        "rounded-lg",
-        elevation === 1 ? "bg-neutral-950" : "",
-        elevation === 2 ? "bg-neutral-900" : "",
+      className={twMerge(
+        "rounded-lg p-spacing-tighter-2",
+        elevation === 1 ? "bg-background-base" : "",
+        elevation === 2 ? "bg-background-elevated-base" : "",
         className,
       )}
     >

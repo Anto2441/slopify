@@ -4,55 +4,50 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export function NavBar() {
   return (
-    <div className="flex items-center justify-between rounded-t-lg px-5 py-4">
+    <div className="flex items-center justify-between px-spacing-looser">
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-spacing-looser">
           <li>
-            <IconButton
-              icon={
-                <ChevronLeftIcon
-                  className="size-6 text-neutral-400"
-                  aria-hidden="true"
-                />
-              }
-            />
+            <IconButton icon={<ChevronLeftIcon className="size-6" />} />
           </li>
           <li>
-            <IconButton
-              icon={
-                <ChevronRightIcon
-                  className="size-6 text-neutral-400"
-                  aria-hidden="true"
-                />
-              }
-            />
+            <IconButton icon={<ChevronRightIcon className="size-6" />} />
           </li>
         </ul>
       </nav>
       <nav>
-        <ul className="flex items-center md:divide-x md:divide-neutral-400">
-          <li className="hidden md:mr-4 md:list-item">
-            <ul className="flex -space-x-1">
+        <ul className="flex items-center md:divide-x md:divide-white">
+          <li className="hidden md:mr-spacing-base md:list-item">
+            <ul className="flex">
               <li>
-                <Button className="p-2 text-neutral-400">Premium</Button>
+                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                  Premium
+                </Button>
               </li>
               <li>
-                <Button className="p-2 text-neutral-400">Assistance</Button>
+                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                  Assistance
+                </Button>
               </li>
               <li>
-                <Button className="p-2 text-neutral-400">Télécharger</Button>
+                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                  Télécharger
+                </Button>
               </li>
             </ul>
           </li>
           <li>
             <ul className="flex items-center">
               <li>
-                <Button className="px-8 text-neutral-400">
+                <Button className="px-spacing-looser-2 py-spacing-tighter">
                   S&apos;inscrire
                 </Button>
               </li>
               <li>
-                <Button className="px-8 py-3" variant="secondary">
+                <Button
+                  className="min-h-spacing-looser-3 px-spacing-looser py-spacing-tighter"
+                  theme="inverted-light"
+                >
                   Se connecter
                 </Button>
               </li>

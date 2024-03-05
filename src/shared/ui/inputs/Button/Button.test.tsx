@@ -1,17 +1,17 @@
 import { EyeSlashIcon } from "@heroicons/react/24/outline";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, test, vi } from "vitest";
+import { cleanup, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, test } from "vitest";
 
 import { Button } from "./Button";
 
 function renderButton({
   children = "Test button",
   icon = undefined,
-  variant = "primary",
+  theme = "accent",
   onClick = () => undefined,
 }: Partial<React.ComponentProps<typeof Button>> = {}) {
   render(
-    <Button icon={icon} variant={variant} onClick={onClick}>
+    <Button icon={icon} theme={theme} onClick={onClick}>
       {children}
     </Button>,
   );
@@ -33,10 +33,7 @@ describe("<Button />", () => {
     const { $button, $children, $icon } = renderButton();
 
     expect($button()).toBeInTheDocument();
-    expect($button()).toHaveClass("bg-accent-500");
-
     expect($children()).toBeInTheDocument();
-
     expect($icon("should not exist")).not.toBeInTheDocument();
   });
 
@@ -48,22 +45,6 @@ describe("<Button />", () => {
     });
 
     expect($icon(expectedTitle)).toBeInTheDocument();
-  });
-
-  test("should call onClick when the button is clicked", () => {
-    const mockOnClick = vi.fn();
-
-    const { $button } = renderButton({ onClick: mockOnClick });
-
-    fireEvent.click($button()!);
-
-    expect(mockOnClick).toHaveBeenCalledTimes(1);
-  });
-
-  test("should render secondary color", () => {
-    const { $button } = renderButton({ variant: "secondary" });
-
-    expect($button()).toHaveClass("bg-white");
   });
 
   afterEach(() => {

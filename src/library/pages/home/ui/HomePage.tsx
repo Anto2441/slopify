@@ -1,10 +1,7 @@
-import { MainFooter } from "@/shared/ui/layouts/MainLayout/MainFooter";
-
 export function HomePage() {
   return (
-    <div>
+    <main>
       <h1>Homepage - Playlists Spotify</h1>
-      <MainFooter />
-    </div>
+    </main>
   );
 }

@@ -12,23 +12,24 @@ export function SignInForm() {
   const { state, signInAction } = useSignInForm();
 
   return (
-    <form action={signInAction} className="mx-auto">
+    <form action={signInAction} className="flex flex-col pt-spacing-looser-3">
       <Input
-        className="mt-10"
         id="email"
         label="Email or username"
         placeholder="Email or username"
       />
 
       {state.errors?.email && (
-        <p className="text-red-500 mt-2">{state.errors.email}</p>
+        <p className="mt-spacing-tighter-2 text-text-size-smaller font-semibold text-text-base">
+          {state.errors.email}
+        </p>
       )}
 
       <Input
-        className="mt-4"
+        className="mt-spacing-base"
         icon={
           <EyeSlashIcon
-            className="size-5 text-neutral-400"
+            className="size-5 text-text-subdued"
             aria-hidden="true"
           />
         }
@@ -38,22 +39,24 @@ export function SignInForm() {
       />
 
       {state.errors?.password && (
-        <p className="text-red-500 mt-2">{state.errors.password}</p>
+        <p className="mt-spacing-tighter-2 text-text-size-smaller font-semibold text-text-base">
+          {state.errors.password}
+        </p>
       )}
 
       <Switch
-        className="mt-4"
+        className="mt-spacing-base"
         defaultChecked
         label="Remember me"
         name="rememberMe"
         value="yes"
       />
 
-      <SignInButton className="mt-8" />
+      <SignInButton className="my-spacing-looser" />
 
-      <p className="mt-8 text-center text-white underline">
-        Forget your password ?
-      </p>
+      <a href="#" className="self-center text-text-base underline">
+        Forgot your password?
+      </a>
     </form>
   );
 }
