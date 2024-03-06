@@ -33,14 +33,14 @@
     --decorative-base: #fff;
     --decorative-subdued: #292929;
 
-    --text-size-smaller-2: 0.6875rem;
-    --text-size-smaller: 0.8125rem;
-    --text-size-base: 1rem;
-    --text-size-larger: 1.25rem;
-    --text-size-larger-2: 1.5rem;
-    --text-size-larger-3: 2rem;
-    --text-size-larger-4: 2.5rem;
-    --text-size-larger-5: 3rem;
+    --font-size-smaller-2: 0.6875rem;
+    --font-size-smaller: 0.8125rem;
+    --font-size-base: 1rem;
+    --font-size-larger: 1.25rem;
+    --font-size-larger-2: 1.5rem;
+    --font-size-larger-3: 2rem;
+    --font-size-larger-4: 2.5rem;
+    --font-size-larger-5: 3rem;
 
     --border-width-hairline: 1px;
     --border-width-thin: 2px;
@@ -86,21 +86,21 @@
     --layout-margin-base: 16px;
     --layout-margin-looser: 24px;
 
-    --corner-radius-smaller: 2px;
-    --corner-radius-base: 4px;
-    --corner-radius-larger: 6px;
-    --corner-radius-larger-2: 8px;
-    --corner-radius-larger-3: 16px;
+    --border-radius-smaller: 2px;
+    --border-radius-base: 4px;
+    --border-radius-larger: 6px;
+    --border-radius-larger-2: 8px;
+    --border-radius-larger-3: 16px;
 
     @media screen(md) {
-      --text-size-smaller-2: 0.75rem;
-      --text-size-smaller: 0.875rem;
-      --text-size-base: 1rem;
-      --text-size-larger: 1.5rem;
-      --text-size-larger-2: 2rem;
-      --text-size-larger-3: 3rem;
-      --text-size-larger-4: 4rem;
-      --text-size-larger-5: 6rem;
+      --font-size-smaller-2: 0.75rem;
+      --font-size-smaller: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-larger: 1.5rem;
+      --font-size-larger-2: 2rem;
+      --font-size-larger-3: 3rem;
+      --font-size-larger-4: 4rem;
+      --font-size-larger-5: 6rem;
 
       --border-width-hairline: 1px;
       --border-width-thin: 2px;
@@ -146,11 +146,11 @@
       --layout-margin-base: 32px;
       --layout-margin-looser: 64px;
 
-      --corner-radius-smaller: 2px;
-      --corner-radius-base: 4px;
-      --corner-radius-larger: 6px;
-      --corner-radius-larger-2: 8px;
-      --corner-radius-larger-3: 16px;
+      --border-radius-smaller: 2px;
+      --border-radius-base: 4px;
+      --border-radius-larger: 6px;
+      --border-radius-larger-2: 8px;
+      --border-radius-larger-3: 16px;
     }
   }
 

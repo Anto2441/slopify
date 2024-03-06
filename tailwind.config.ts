@@ -6,11 +6,11 @@ const config = {
   theme: {
     extend: {
       borderRadius: {
-        "corner-radius-smaller": "var(--corner-radius-smaller)",
-        "corner-radius-base": "var(--corner-radius-base)",
-        "corner-radius-larger": "var(--corner-radius-larger)",
-        "corner-radius-larger-2": "var(--corner-radius-larger-2)",
-        "corner-radius-larger-3": "var(--corner-radius-larger-3)",
+        "border-radius-smaller": "var(--border-radius-smaller)",
+        "border-radius-base": "var(--border-radius-base)",
+        "border-radius-larger": "var(--border-radius-larger)",
+        "border-radius-larger-2": "var(--border-radius-larger-2)",
+        "border-radius-larger-3": "var(--border-radius-larger-3)",
       },
 
       borderWidth: {
@@ -53,14 +53,18 @@ const config = {
       },
 
       fontSize: {
-        "text-size-smaller-2": "var(--text-size-smaller-2)",
-        "text-size-smaller": "var(--text-size-smaller)",
-        "text-size-base": "var(--text-size-base)",
-        "text-size-larger": "var(--text-size-larger)",
-        "text-size-larger-2": "var(--text-size-larger-2)",
-        "text-size-larger-3": "var(--text-size-larger-3)",
-        "text-size-larger-4": "var(--text-size-larger-4)",
-        "text-size-larger-5": "var(--text-size-larger-5)",
+        "font-size-smaller-2": "var(--font-size-smaller-2)",
+        "font-size-smaller": "var(--font-size-smaller)",
+        "font-size-base": "var(--font-size-base)",
+        "font-size-larger": "var(--font-size-larger)",
+        "font-size-larger-2": "var(--font-size-larger-2)",
+        "font-size-larger-3": "var(--font-size-larger-3)",
+        "font-size-larger-4": "var(--font-size-larger-4)",
+        "font-size-larger-5": "var(--font-size-larger-5)",
+      },
+
+      ringOffsetWidth: {
+        3: "3px",
       },
 
       spacing: {

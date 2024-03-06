@@ -19,7 +19,7 @@ export function SignInForm() {
       />
 
       {state.errors?.email && (
-        <p className="mt-spacing-tighter-2 text-text-size-smaller font-semibold text-text-base">
+        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-text-base">
           {state.errors.email}
         </p>
       )}
@@ -35,7 +35,7 @@ export function SignInForm() {
       />
 
       {state.errors?.password && (
-        <p className="mt-spacing-tighter-2 text-text-size-smaller font-semibold text-text-base">
+        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-text-base">
           {state.errors.password}
         </p>
       )}

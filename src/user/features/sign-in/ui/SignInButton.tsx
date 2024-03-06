@@ -13,8 +13,15 @@ export function SignInButton({ className }: SignInButtonProps) {
 
   return (
     // TODO: Update Button to use all props of native <button /> element
-    <Button className={className} type="submit" theme="accent">
-      {pending ? "Log In…" : "Log In"}
+    <Button
+      className={className}
+      disabled={pending}
+      size="large"
+      type="submit"
+      variant="accent"
+      withFocusRing
+    >
+      Log In
     </Button>
   );
 }
