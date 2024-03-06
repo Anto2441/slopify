@@ -1,5 +1,5 @@
-import { EyeSlashIcon } from "@heroicons/react/24/outline";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { HiEyeSlash } from "react-icons/hi2";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
 import { Input } from "./Input";
@@ -55,7 +55,7 @@ describe("<TextField />", () => {
     const expectedTitle = "icon title";
 
     const { $icon } = renderInput({
-      icon: <EyeSlashIcon title={expectedTitle} />,
+      icon: <HiEyeSlash title={expectedTitle} />,
     });
 
     expect($icon(expectedTitle)).toBeInTheDocument();

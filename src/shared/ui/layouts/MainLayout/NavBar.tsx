@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 import { Button, IconButton } from "@/shared/ui";
 
@@ -8,10 +8,10 @@ export function NavBar() {
       <nav>
         <ul className="flex space-x-spacing-looser">
           <li>
-            <IconButton icon={<ChevronLeftIcon className="size-6" />} />
+            <IconButton icon={<HiChevronLeft className="size-6" />} />
           </li>
           <li>
-            <IconButton icon={<ChevronRightIcon className="size-6" />} />
+            <IconButton icon={<HiChevronRight className="size-6" />} />
           </li>
         </ul>
       </nav>
