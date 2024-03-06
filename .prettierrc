@@ -4,5 +4,5 @@
     "prettier-plugin-tailwindcss"
   ],
   "singleQuote": false,
-  "tailwindFunctions": ["twJoin", "twMerge"]
+  "tailwindFunctions": ["compose", "cva", "twJoin", "twMerge"]
 }
