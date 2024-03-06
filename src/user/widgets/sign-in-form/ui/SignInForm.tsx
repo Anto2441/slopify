@@ -1,6 +1,6 @@
 "use client";
 
-import { EyeSlashIcon } from "@heroicons/react/24/outline";
+import { HiEyeSlash } from "react-icons/hi2";
 
 import { Input, Switch } from "@/shared/ui";
 import { SignInButton } from "@/user/features/sign-in";
@@ -27,10 +27,7 @@ export function SignInForm() {
       <Input
         className="mt-spacing-base"
         icon={
-          <EyeSlashIcon
-            className="size-5 text-text-subdued"
-            aria-hidden="true"
-          />
+          <HiEyeSlash className="size-5 text-text-subdued" aria-hidden="true" />
         }
         id="password"
         label="Password"

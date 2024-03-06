@@ -1,11 +1,11 @@
-import {
-  GlobeAltIcon,
-  HomeIcon,
-  MagnifyingGlassIcon,
-  PlusIcon,
-  RectangleStackIcon,
-} from "@heroicons/react/24/outline";
 import Image from "next/image";
+import {
+  HiGlobeAlt,
+  HiHome,
+  HiMagnifyingGlass,
+  HiPlus,
+  HiRectangleStack,
+} from "react-icons/hi2";
 
 import { Button, IconButton, Paper } from "@/shared/ui";
 
@@ -25,7 +25,7 @@ export function SideBar() {
               href="#"
               className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
             >
-              <HomeIcon className="size-6" />
+              <HiHome className="size-6" />
 
               <span className="ml-spacing-base">Accueil</span>
             </a>
@@ -36,7 +36,7 @@ export function SideBar() {
               href="#"
               className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
             >
-              <MagnifyingGlassIcon className="size-6" />
+              <HiMagnifyingGlass className="size-6" />
 
               <span className="ml-spacing-base">Rechercher</span>
             </a>
@@ -50,14 +50,12 @@ export function SideBar() {
             href="#"
             className="inline-flex items-center font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
           >
-            <RectangleStackIcon className="size-6" />
+            <HiRectangleStack className="size-6" />
 
             <span className="ml-spacing-tighter">Bibliothèque</span>
           </a>
 
-          <IconButton
-            icon={<PlusIcon className="size-6 text-text-subdued" />}
-          />
+          <IconButton icon={<HiPlus className="size-6 text-text-subdued" />} />
         </header>
 
         <div className="grow space-y-spacing-looser overflow-scroll">
@@ -115,7 +113,7 @@ export function SideBar() {
 
           <Button
             className="flex flex-row-reverse items-center border border-essential-subdued p-spacing-base py-spacing-tighter-4 text-sm text-text-base"
-            icon={<GlobeAltIcon className="mr-spacing-tighter-4 size-5" />}
+            icon={<HiGlobeAlt className="mr-spacing-tighter-4 size-5" />}
           >
             Français
           </Button>

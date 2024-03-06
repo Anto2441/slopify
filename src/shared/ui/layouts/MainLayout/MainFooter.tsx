@@ -1,8 +1,4 @@
-import {
-  BoltIcon,
-  CameraIcon,
-  LightBulbIcon,
-} from "@heroicons/react/24/outline";
+import { HiBolt, HiCamera, HiLightBulb } from "react-icons/hi2";
 
 import { IconButton } from "@/shared/ui";
 
@@ -65,7 +61,7 @@ export function MainFooter() {
             <IconButton
               className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
               icon={
-                <CameraIcon
+                <HiCamera
                   className="size-5 text-text-base"
                   aria-hidden="true"
                 />
@@ -76,10 +72,7 @@ export function MainFooter() {
             <IconButton
               className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
               icon={
-                <BoltIcon
-                  className="size-5 text-text-base"
-                  aria-hidden="true"
-                />
+                <HiBolt className="size-5 text-text-base" aria-hidden="true" />
               }
             />
           </div>
@@ -87,7 +80,7 @@ export function MainFooter() {
             <IconButton
               className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
               icon={
-                <LightBulbIcon
+                <HiLightBulb
                   className="size-5 text-text-base"
                   aria-hidden="true"
                 />

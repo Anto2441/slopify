@@ -1,5 +1,5 @@
-import { EyeSlashIcon } from "@heroicons/react/24/outline";
 import { cleanup, render, screen } from "@testing-library/react";
+import { HiEyeSlash } from "react-icons/hi2";
 import { afterEach, describe, expect, test } from "vitest";
 
 import { Button } from "./Button";
@@ -41,7 +41,7 @@ describe("<Button />", () => {
     const expectedTitle = "icon title";
 
     const { $icon } = renderButton({
-      icon: <EyeSlashIcon title={expectedTitle} />,
+      icon: <HiEyeSlash title={expectedTitle} />,
     });
 
     expect($icon(expectedTitle)).toBeInTheDocument();
