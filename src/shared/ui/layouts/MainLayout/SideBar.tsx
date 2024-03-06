@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {
-  HiGlobeAlt,
   HiHome,
   HiMagnifyingGlass,
+  HiOutlineGlobeAlt,
   HiPlus,
   HiRectangleStack,
 } from "react-icons/hi2";
@@ -68,10 +68,7 @@ export function SideBar() {
               C&apos;est simple nous allons vous aider
             </span>
 
-            <Button
-              theme="inverted-light"
-              className="mt-spacing-looser px-spacing-base py-spacing-tighter-4 text-sm"
-            >
+            <Button className="mt-spacing-looser" variant="inverted-light">
               Créer une playlist
             </Button>
           </Paper>
@@ -85,10 +82,7 @@ export function SideBar() {
               Nous vous transmettrons des informations sur les nouveaux épisodes
             </span>
 
-            <Button
-              theme="inverted-light"
-              className="mt-spacing-looser px-spacing-base py-spacing-tighter-4 text-sm"
-            >
+            <Button className="mt-spacing-looser" variant="inverted-light">
               Parcourir les podcasts
             </Button>
           </Paper>
@@ -111,11 +105,8 @@ export function SideBar() {
             <a href="#">Cookies</a>
           </div>
 
-          <Button
-            className="flex flex-row-reverse items-center border border-essential-subdued p-spacing-base py-spacing-tighter-4 text-sm text-text-base"
-            icon={<HiGlobeAlt className="mr-spacing-tighter-4 size-5" />}
-          >
-            Français
+          <Button variant="outlined">
+            <HiOutlineGlobeAlt /> Français
           </Button>
         </footer>
       </Paper>

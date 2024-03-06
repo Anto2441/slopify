@@ -6,7 +6,7 @@ import { SignInForm } from "../../../widgets/sign-in-form";
 export function SignInPage() {
   return (
     <div className="md:mx-auto md:w-9/12">
-      <h1 className="text-text-size-larger-3 font-extrabold md:text-center">
+      <h1 className="text-font-size-larger-3 font-extrabold md:text-center">
         Log in to Slopify
       </h1>
 

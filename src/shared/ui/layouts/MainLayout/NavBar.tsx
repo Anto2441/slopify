@@ -8,29 +8,43 @@ export function NavBar() {
       <nav>
         <ul className="flex space-x-spacing-looser">
           <li>
+            {/* TODO: replace with Link */}
             <IconButton icon={<HiChevronLeft className="size-6" />} />
           </li>
           <li>
+            {/* TODO: replace with Link */}
             <IconButton icon={<HiChevronRight className="size-6" />} />
           </li>
         </ul>
       </nav>
       <nav>
-        <ul className="flex items-center md:divide-x md:divide-white">
+        <ul className="flex items-center md:divide-x md:divide-decorative-base">
           <li className="hidden md:mr-spacing-base md:list-item">
             <ul className="flex">
               <li>
-                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                {/* TODO: replace with Link */}
+                <Button
+                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
+                  size="large"
+                >
                   Premium
                 </Button>
               </li>
               <li>
-                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                {/* TODO: replace with Link */}
+                <Button
+                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
+                  size="large"
+                >
                   Assistance
                 </Button>
               </li>
               <li>
-                <Button className="px-spacing-tighter-3 py-spacing-tighter tracking-widest">
+                {/* TODO: replace with Link */}
+                <Button
+                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
+                  size="large"
+                >
                   Télécharger
                 </Button>
               </li>
@@ -39,15 +53,13 @@ export function NavBar() {
           <li>
             <ul className="flex items-center">
               <li>
-                <Button className="px-spacing-looser-2 py-spacing-tighter">
-                  S&apos;inscrire
-                </Button>
+                {/* TODO: replace with Link */}
+                <Button size="large">S&apos;inscrire</Button>
               </li>
+
               <li>
-                <Button
-                  className="min-h-spacing-looser-3 px-spacing-looser py-spacing-tighter"
-                  theme="inverted-light"
-                >
+                {/* TODO: replace with Link */}
+                <Button variant="inverted-light" size="large">
                   Se connecter
                 </Button>
               </li>
