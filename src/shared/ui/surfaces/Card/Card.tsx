@@ -3,8 +3,7 @@ import { IoMdPlay } from "react-icons/io";
 import { twJoin } from "tailwind-merge";
 
 import { IconButton } from "../../inputs";
-
-import { Paper } from "..";
+import { Paper } from "../Paper/Paper";
 
 export interface CardProps {
   /**
@@ -39,10 +38,10 @@ export function Card({ roundedPicture }: CardProps) {
           />
         </div>
         <div className="mt-spacing-base">
-          <a href="" className="font-bold">
+          <a href="" className="font-bold text-text-base">
             Todays Top Hits
           </a>
-          <span className="theme-muted-accent line-clamp-2 text-font-size-smaller font-semibold text-essential-subdued">
+          <span className="line-clamp-2 text-font-size-smaller font-semibold text-text-subdued">
             Tate McRae is on top of the Hottest 50!
           </span>
         </div>
