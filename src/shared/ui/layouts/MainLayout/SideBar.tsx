@@ -59,7 +59,7 @@ export function SideBar() {
         </header>
 
         <div className="grow space-y-spacing-looser overflow-scroll">
-          <Paper className="px-spacing-base py-spacing-base" elevation={2}>
+          <Paper className="px-spacing-base py-spacing-base" variant="elevated">
             <span className="block font-bold">
               Créez votre première playlist
             </span>
@@ -73,7 +73,7 @@ export function SideBar() {
             </Button>
           </Paper>
 
-          <Paper className="px-spacing-base py-spacing-base" elevation={2}>
+          <Paper className="px-spacing-base py-spacing-base" variant="elevated">
             <span className="block font-bold">
               Cherchons quelques podcasts auxquels vous abonner
             </span>
