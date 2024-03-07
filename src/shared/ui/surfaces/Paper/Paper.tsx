@@ -1,27 +1,33 @@
+import { cva, type VariantProps } from "cva";
 import { twMerge } from "tailwind-merge";
 
-interface PaperProps {
-  /** The content to be displayed inside the Paper */
+const paperVariants = cva({
+  base: `rounded-lg p-spacing-tighter-2`,
+
+  defaultVariants: {
+    variant: "flat",
+  },
+
+  variants: {
+    variant: {
+      flat: `bg-background-base`,
+      tinted: `bg-background-tinted-base hover:bg-background-tinted-highlight`,
+      elevated: `bg-background-elevated-base`,
+    },
+  },
+});
+
+interface PaperProps extends VariantProps<typeof paperVariants> {
   children: React.ReactNode;
-  /** Additional CSS class names for styling */
   className?: string;
-  /** The elevation level of the Paper */
-  elevation?: 1 | 2;
 }
 
 /**
  * Renders a Paper component with the given children, class name, and elevation.
  */
-export function Paper({ children, className, elevation = 1 }: PaperProps) {
+export function Paper({ children, className, variant }: PaperProps) {
   return (
-    <div
-      className={twMerge(
-        "rounded-lg p-spacing-tighter-2",
-        elevation === 1 ? "bg-background-base" : "",
-        elevation === 2 ? "bg-background-elevated-base" : "",
-        className,
-      )}
-    >
+    <div className={twMerge(paperVariants({ className, variant }))}>
       {children}
     </div>
   );
