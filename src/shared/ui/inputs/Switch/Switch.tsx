@@ -1,133 +1,43 @@
 "use client";
 
-import { Switch as HeadlessSwitch } from "@headlessui/react";
-
+import * as SwitchPrimitives from "@radix-ui/react-switch";
+import React from "react";
 import { twJoin } from "tailwind-merge";
-
-type CommonProps = {
-  /**
-   * Optional additional CSS class names to apply to the switch component for custom styling.
-   */
-  className?: string;
-
-  /**
-   * A brief explanation about the switch's purpose, which will be displayed below the label.
-   */
-  description?: string;
-
-  /**
-   * Descriptive label for the switch component, which will be displayed adjacent to the toggle.
-   */
-  label: string;
-
-  /**
-   * The name used when using this component inside a form.
-   */
-  name?: string;
-
-  /**
-   * The value used when using this component inside a form, if it is checked.
-   */
-  value?: string;
-
-  /**
-   * Callback function that is invoked when the switch is toggled.
-   *
-   * @param checked - The new state of the switch.
-   */
-  onChange?: (checked: boolean) => void;
-};
-
-type ControlledSwitchProps = {
-  /**
-   * Indicates whether the switch is currently in the "on" position.
-   */
-  checked: boolean;
-
-  /**
-   * Callback function that is invoked when the switch is toggled.
-   *
-   * @param checked - The new state of the switch.
-   */
-  onChange: (checked: boolean) => void;
-} & { defaultChecked?: never };
-
-type UncontrolledSwitchProps = {
-  /**
-   * The default checked value when using as an uncontrolled component.
-   */
-  defaultChecked: boolean;
-
-  /**
-   * The name used when using this component inside a form.
-   */
-  name: string;
-
-  /**
-   * The value used when using this component inside a form, if it is checked.
-   */
-  value: string;
-} & { checked?: never };
-
-type SwitchProps = CommonProps &
-  (ControlledSwitchProps | UncontrolledSwitchProps);
+import { disabledInput, focusRing } from "../../utils";
 
 /**
- * Renders a Switch component that enables users to toggle between active (on) and inactive (off) states.
- * The visual design indicates the current state, and an event is triggered upon state change for further handling.
+ * A switch component that is styled according to the [Radix UI](https://radix-ui.com) design system.
  *
- * This component can be controlled or uncontrolled.
- * - Controlled: `checked` and `onChange` props are managed externally.
- * - Uncontrolled: `defaultChecked` sets the initial state, and `name` and `value` are used within forms.
+ * This is a wrapper around Radix UI.
+ *
+ * @see https://www.radix-ui.com/docs/primitives/components/switch
+ *
+ * The switch has built-in styles for the enabled and disabled states. The switch will also get a focus ring when it is focused.
+ *
+ * You can use the `checked` prop to set the initial state of the switch, or you can use the `defaultChecked` prop to set the initial state if you don't want to maintain the state of the switch yourself.
+ *
+ * The `onCheckedChange` prop can be used to listen for changes to the switch's checked state. This prop is only necessary if you want to use the switch in a controlled manner. If you don't provide this prop, the switch will be used in an uncontrolled manner.
  */
-export function Switch({
-  checked,
-  className,
-  defaultChecked,
-  description,
-  label,
-  name,
-  value,
-  onChange,
-}: SwitchProps) {
+export const Switch = React.forwardRef<
+  React.ElementRef<typeof SwitchPrimitives.Root>,
+  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
+>(function Switch({ className, ...switchProps }, ref) {
   return (
-    <HeadlessSwitch.Group>
-      <div
+    <SwitchPrimitives.Root
+      className={twJoin(
+        `inline-flex h-4 w-7 translate-y-0.5 cursor-default items-center rounded-full transition-colors duration-200 ease-in-out data-[state=checked]:bg-essential-bright-accent data-[state=unchecked]:bg-essential-subdued`,
+        focusRing(),
+        disabledInput(),
+        className,
+      )}
+      {...switchProps}
+      ref={ref}
+    >
+      <SwitchPrimitives.Thumb
         className={twJoin(
-          "grid-row-2 grid auto-cols-max grid-flow-col gap-x-spacing-tighter gap-y-spacing-tighter-4 text-text-base",
-          className,
+          "pointer-events-none size-3 transform rounded-full bg-black transition-transform duration-200 ease-in-out will-change-transform data-[state=checked]:translate-x-3.5 data-[state=unchecked]:translate-x-0.5",
         )}
-      >
-        <HeadlessSwitch
-          checked={checked}
-          className={twJoin(
-            "relative row-span-2 inline-flex h-4 w-7 translate-y-0.5 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black ui-checked:bg-essential-bright-accent ui-not-checked:bg-essential-subdued",
-          )}
-          defaultChecked={defaultChecked}
-          name={name}
-          value={value}
-          onChange={onChange}
-        >
-          <span className="sr-only">{label}</span>
-
-          <span
-            aria-hidden="true"
-            className={twJoin(
-              "pointer-events-none inline-block size-3 transform rounded-full bg-black shadow-lg ring-0 transition-transform duration-200 ease-in-out ui-checked:translate-x-3.5 ui-not-checked:translate-x-0.5",
-            )}
-          />
-        </HeadlessSwitch>
-
-        <HeadlessSwitch.Label className="text-sm font-semibold">
-          {label}
-        </HeadlessSwitch.Label>
-
-        {description && (
-          <HeadlessSwitch.Description className="text-xs">
-            {description}
-          </HeadlessSwitch.Description>
-        )}
-      </div>
-    </HeadlessSwitch.Group>
+      />
+    </SwitchPrimitives.Root>
   );
-}
+});

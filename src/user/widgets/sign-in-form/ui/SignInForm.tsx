@@ -2,7 +2,7 @@
 
 import { HiEyeSlash } from "react-icons/hi2";
 
-import { Input, Switch } from "@/shared/ui";
+import { Input, Label, Switch } from "@/shared/ui";
 import { SignInButton } from "@/user/features/sign-in";
 
 import { useSignInForm } from "../model/useSignInForm";
@@ -40,13 +40,14 @@ export function SignInForm() {
         </p>
       )}
 
-      <Switch
-        className="mt-spacing-base"
-        defaultChecked
-        label="Remember me"
-        name="rememberMe"
-        value="yes"
-      />
+      {/* TODO: Extract it in a FormControl and FormItem components */}
+      <div className="mt-spacing-base inline-flex items-baseline gap-x-spacing-tighter">
+        <Switch defaultChecked name="rememberMe" id="rememberMe" value="yes" />
+
+        <Label className="text-font-size-smaller" htmlFor="rememberMe">
+          Remember me
+        </Label>
+      </div>
 
       <SignInButton className="my-spacing-looser" />
 
