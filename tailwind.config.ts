@@ -127,7 +127,7 @@ const config = {
     },
   },
 
-  plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")],
+  plugins: [require("@tailwindcss/forms")],
 } satisfies Config;
 
 export default config;

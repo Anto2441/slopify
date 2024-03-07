@@ -13,15 +13,16 @@ type Story = StoryObj<typeof meta>;
 export const Controlled: Story = {
   args: {
     checked: false,
-    label: "Controlled switch field",
-    onChange: () => {},
+  },
+  argTypes: {
+    onCheckedChange: { action: "checked" },
   },
 };
 
 export const Uncontrolled: Story = {
   args: {
     defaultChecked: false,
-    label: "Uncontrolled switch field",
+    id: "setting",
     name: "setting",
     value: "enabled",
   },
