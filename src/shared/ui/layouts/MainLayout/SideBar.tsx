@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   HiHome,
   HiMagnifyingGlass,
@@ -7,38 +6,36 @@ import {
   HiRectangleStack,
 } from "react-icons/hi2";
 
-import { Button, IconButton, Paper } from "@/shared/ui";
+import { SlopifyLogo } from "../../data-display";
+import { Button, IconButton } from "../../inputs";
+import { Paper } from "../../surfaces";
 
 export function SideBar() {
   return (
     <nav className="flex h-full w-[345px] shrink-0 flex-col">
-      <Paper className="shrink-0">
-        <div className="flex pl-spacing-base font-bold text-text-base">
-          <Image width={28} height={28} src="/logo.png" alt="Slopify logo" />
+      <Paper className="shrink-0 px-spacing-looser pb-spacing-base pt-spacing-looser">
+        <SlopifyLogo />
 
-          <span className="ml-spacing-tighter-5">Slopify</span>
-        </div>
-
-        <ul className="mt-spacing-tighter space-y-spacing-base px-spacing-base py-spacing-tighter-2 text-text-subdued">
+        <ul className="mt-spacing-looser space-y-spacing-base text-text-subdued">
           <li>
             <a
               href="#"
-              className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
+              className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
             >
-              <HiHome className="size-6" />
+              <HiHome className="text-[1.5em]" />
 
-              <span className="ml-spacing-base">Accueil</span>
+              <span>Accueil</span>
             </a>
           </li>
 
           <li>
             <a
               href="#"
-              className="inline-flex items-center font-bold transition-colors duration-200 hover:text-text-base"
+              className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
             >
-              <HiMagnifyingGlass className="size-6" />
+              <HiMagnifyingGlass className="text-[1.5em]" />
 
-              <span className="ml-spacing-base">Rechercher</span>
+              <span>Rechercher</span>
             </a>
           </li>
         </ul>
@@ -48,14 +45,16 @@ export function SideBar() {
         <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
           <a
             href="#"
-            className="inline-flex items-center font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
+            className="inline-flex items-center space-x-spacing-tighter font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
           >
-            <HiRectangleStack className="size-6" />
+            <HiRectangleStack className="text-[1.5em]" />
 
-            <span className="ml-spacing-tighter">Bibliothèque</span>
+            <span>Bibliothèque</span>
           </a>
 
-          <IconButton icon={<HiPlus className="size-6 text-text-subdued" />} />
+          <IconButton
+            icon={<HiPlus className="text-[1.5em] text-text-subdued" />}
+          />
         </header>
 
         <div className="grow space-y-spacing-looser overflow-scroll">

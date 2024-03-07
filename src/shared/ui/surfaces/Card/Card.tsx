@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { IoMdPlay } from "react-icons/io";
 import { twJoin } from "tailwind-merge";
 
+import { Image } from "../../data-display";
 import { IconButton } from "../../inputs";
 import { Paper } from "../Paper/Paper";
 
@@ -24,7 +24,7 @@ export function Card({ roundedPicture }: CardProps) {
             src="https://picsum.photos/300/300"
             width={300}
             height={300}
-            alt="card picture"
+            alt=""
             className={twJoin(
               `rounded-border-radius-larger`,
               roundedPicture && `rounded-full`,
@@ -38,7 +38,7 @@ export function Card({ roundedPicture }: CardProps) {
           />
         </div>
         <div className="mt-spacing-base">
-          <a href="" className="font-bold text-text-base">
+          <a href="#" className="font-bold text-text-base">
             Todays Top Hits
           </a>
           <span className="line-clamp-2 text-font-size-smaller font-semibold text-text-subdued">
