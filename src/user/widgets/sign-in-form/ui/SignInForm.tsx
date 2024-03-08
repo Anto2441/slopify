@@ -2,7 +2,7 @@
 
 import { HiEyeSlash } from "react-icons/hi2";
 
-import { Input, Label, Switch } from "@/shared/ui";
+import { Input, Label, Link, Switch } from "@/shared/ui";
 import { SignInButton } from "@/user/features/sign-in";
 
 import { useSignInForm } from "../model/useSignInForm";
@@ -51,9 +51,9 @@ export function SignInForm() {
 
       <SignInButton className="my-spacing-looser" />
 
-      <a href="#" className="self-center text-text-base underline">
+      <Link href="#" className="self-center text-text-base underline">
         Forgot your password?
-      </a>
+      </Link>
     </form>
   );
 }

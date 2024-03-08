@@ -1,3 +1,4 @@
+import { Link } from "@/shared/ui";
 import { SignInForm } from "../../../widgets/sign-in-form";
 
 /**
@@ -19,12 +20,12 @@ export function SignInPage() {
           Don&apos;t have an account?
         </span>
 
-        <a
+        <Link
           href="#"
           className="ml-spacing-tighter-2 text-center text-text-base underline"
         >
           Sign up for Slopify
-        </a>
+        </Link>
       </div>
     </div>
   );

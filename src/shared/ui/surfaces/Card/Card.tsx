@@ -3,6 +3,7 @@ import { twJoin } from "tailwind-merge";
 
 import { Image } from "../../data-display";
 import { IconButton } from "../../inputs";
+import { Link } from "../../navigation";
 import { Paper } from "../Paper/Paper";
 
 export interface CardProps {
@@ -38,9 +39,9 @@ export function Card({ roundedPicture }: CardProps) {
           />
         </div>
         <div className="mt-spacing-base">
-          <a href="#" className="font-bold text-text-base">
+          <Link href="#" className="font-bold text-text-base">
             Todays Top Hits
-          </a>
+          </Link>
           <span className="line-clamp-2 text-font-size-smaller font-semibold text-text-subdued">
             Tate McRae is on top of the Hottest 50!
           </span>
