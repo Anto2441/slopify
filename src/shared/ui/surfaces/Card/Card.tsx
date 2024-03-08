@@ -1,4 +1,4 @@
-import { IoMdPlay } from "react-icons/io";
+import { HiPlay } from "react-icons/hi2";
 import { twJoin } from "tailwind-merge";
 
 import { Image } from "../../data-display";
@@ -31,11 +31,11 @@ export function Card({ roundedPicture }: CardProps) {
             )}
           />
           <IconButton
-            className="theme-accent absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 bg-background-base p-spacing-tighter opacity-0 transition-all duration-300 hover:scale-105 hover:bg-background-highlight group-hover:translate-y-0 group-hover:opacity-100"
-            icon={
-              <IoMdPlay className="size-4 text-text-base" aria-hidden="true" />
-            }
-          />
+            variant="accent"
+            className="absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+          >
+            <HiPlay />
+          </IconButton>
         </div>
         <div className="mt-spacing-base">
           <a href="#" className="font-bold text-text-base">

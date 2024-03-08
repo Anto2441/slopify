@@ -56,37 +56,18 @@ export function MainFooter() {
           </nav>
         </div>
 
-        <div className="flex gap-4">
-          <div>
-            <IconButton
-              className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
-              icon={
-                <HiCamera
-                  className="size-5 text-text-base"
-                  aria-hidden="true"
-                />
-              }
-            />
-          </div>
-          <div>
-            <IconButton
-              className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
-              icon={
-                <HiBolt className="size-5 text-text-base" aria-hidden="true" />
-              }
-            />
-          </div>
-          <div>
-            <IconButton
-              className="bg-background-elevated-base p-spacing-tighter hover:bg-white/40"
-              icon={
-                <HiLightBulb
-                  className="size-5 text-text-base"
-                  aria-hidden="true"
-                />
-              }
-            />
-          </div>
+        <div className="space-x-spacing-base">
+          <IconButton variant="tinted">
+            <HiCamera />
+          </IconButton>
+
+          <IconButton variant="tinted">
+            <HiBolt />
+          </IconButton>
+
+          <IconButton variant="tinted">
+            <HiLightBulb />
+          </IconButton>
         </div>
       </div>
 

@@ -1,27 +1,62 @@
-import { twJoin } from "tailwind-merge";
+import { cva, type VariantProps } from "cva";
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
-interface IconButtonProps {
-  /** Additional CSS classes to apply to the button */
-  className?: string;
+import { disabledInput, focusVisibleRing } from "../../utils";
 
-  /** Icon to display */
-  icon: React.ReactNode;
+const iconButtonVariants = cva({
+  base: `rounded-full transition-all duration-200 [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
 
-  /** Optional click event handler */
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-}
+  defaultVariants: {
+    disabled: false,
+    size: "medium",
+    variant: "text",
+  },
+
+  variants: {
+    disabled: {
+      true: disabledInput(),
+    },
+
+    size: {
+      small: `p-spacing-tighter-2`,
+      medium: `p-spacing-tighter`,
+      large: `p-spacing-base`,
+    },
+
+    variant: {
+      accent: `theme-accent bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      ghost: `bg-transparent text-text-subdued hover:bg-background-highlight hover:text-text-base active:bg-background-tinted-press`,
+      text: `bg-transparent text-text-subdued hover:text-text-base active:text-text-subdued`,
+      tinted: `bg-background-tinted-base hover:bg-background-tinted-highlight hover:text-text-base active:bg-background-tinted-press`,
+      "over-media": `theme-over-media bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      "inverted-dark": `theme-inverted-dark bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      "inverted-light": `theme-inverted-light bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+    },
+  },
+});
+
+type IconButtonProps = React.ComponentPropsWithoutRef<"button"> &
+  VariantProps<typeof iconButtonVariants>;
 
 /**
- * Renders a icon button
+ * Renders an icon button
  */
-export function IconButton({ className = "", icon, onClick }: IconButtonProps) {
-  return (
-    <button
-      className={twJoin(className, "rounded-full")}
-      type="button"
-      onClick={onClick}
-    >
-      {icon}
-    </button>
-  );
-}
+export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
+  function IconButton({ className, size, variant, ...props }, ref) {
+    return (
+      <button
+        {...props}
+        className={twMerge(
+          iconButtonVariants({
+            className,
+            disabled: props.disabled,
+            size,
+            variant,
+          }),
+        )}
+        ref={ref}
+      />
+    );
+  },
+);

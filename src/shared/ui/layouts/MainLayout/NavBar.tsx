@@ -6,14 +6,19 @@ export function NavBar() {
   return (
     <div className="flex items-center justify-between px-spacing-looser">
       <nav>
-        <ul className="flex space-x-spacing-looser">
+        <ul className="flex space-x-spacing-tighter-2">
           <li>
             {/* TODO: replace with Link */}
-            <IconButton icon={<HiChevronLeft className="size-6" />} />
+            <IconButton disabled size="small" variant="over-media">
+              <HiChevronLeft />
+            </IconButton>
           </li>
+
           <li>
             {/* TODO: replace with Link */}
-            <IconButton icon={<HiChevronRight className="size-6" />} />
+            <IconButton size="small" variant="over-media">
+              <HiChevronRight />
+            </IconButton>
           </li>
         </ul>
       </nav>
