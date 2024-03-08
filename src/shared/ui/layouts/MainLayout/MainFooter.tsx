@@ -1,6 +1,7 @@
 import { HiBolt, HiCamera, HiLightBulb } from "react-icons/hi2";
 
-import { IconButton } from "@/shared/ui";
+import { IconButton } from "../../inputs";
+import { Link } from "../../navigation";
 
 export function MainFooter() {
   return (
@@ -11,13 +12,13 @@ export function MainFooter() {
             <p className="font-bold">Société</p>
             <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2 text-text-subdued">
               <li>
-                <a href="/">À propos</a>
+                <Link href="/">À propos</Link>
               </li>
               <li>
-                <a href="/">Offres d&apos;emploi</a>
+                <Link href="/">Offres d&apos;emploi</Link>
               </li>
               <li>
-                <a href="/">For the record</a>
+                <Link href="/">For the record</Link>
               </li>
             </ul>
           </nav>
@@ -26,19 +27,19 @@ export function MainFooter() {
             <p className="font-bold">Communautés</p>
             <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2 text-text-subdued">
               <li>
-                <a href="/">Espace artistes</a>
+                <Link href="/">Espace artistes</Link>
               </li>
               <li>
-                <a href="/">Développeurs</a>
+                <Link href="/">Développeurs</Link>
               </li>
               <li>
-                <a href="/">Campagnes publicitaires</a>
+                <Link href="/">Campagnes publicitaires</Link>
               </li>
               <li>
-                <a href="/">Investisseurs</a>
+                <Link href="/">Investisseurs</Link>
               </li>
               <li>
-                <a href="/">Fournisseurs</a>
+                <Link href="/">Fournisseurs</Link>
               </li>
             </ul>
           </nav>
@@ -47,10 +48,10 @@ export function MainFooter() {
             <p className="font-bold">Liens utiles</p>
             <ul className="mt-spacing-tighter-2 flex flex-col space-y-spacing-tighter-2 text-text-subdued">
               <li>
-                <a href="/">Assistance</a>
+                <Link href="/">Assistance</Link>
               </li>
               <li>
-                <a href="/">Appli mobile gratuite</a>
+                <Link href="/">Appli mobile gratuite</Link>
               </li>
             </ul>
           </nav>

@@ -8,6 +8,7 @@ import {
 
 import { SlopifyLogo } from "../../data-display";
 import { Button, IconButton } from "../../inputs";
+import { Link } from "../../navigation";
 import { Paper } from "../../surfaces";
 
 export function SideBar() {
@@ -18,39 +19,39 @@ export function SideBar() {
 
         <ul className="mt-spacing-looser space-y-spacing-base text-text-subdued">
           <li>
-            <a
+            <Link
               href="#"
               className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
             >
               <HiHome className="text-[1.5em]" />
 
-              <span>Accueil</span>
-            </a>
+              <span className="ml-spacing-base">Accueil</span>
+            </Link>
           </li>
 
           <li>
-            <a
+            <Link
               href="#"
               className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
             >
               <HiMagnifyingGlass className="text-[1.5em]" />
 
-              <span>Rechercher</span>
-            </a>
+              <span className="ml-spacing-base">Rechercher</span>
+            </Link>
           </li>
         </ul>
       </Paper>
 
       <Paper className="mt-2 flex grow flex-col overflow-hidden pt-spacing-base">
         <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
-          <a
+          <Link
             href="#"
             className="inline-flex items-center space-x-spacing-tighter font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
           >
             <HiRectangleStack className="text-[1.5em]" />
 
-            <span>Bibliothèque</span>
-          </a>
+            <span className="ml-spacing-tighter">Bibliothèque</span>
+          </Link>
 
           <IconButton
             icon={<HiPlus className="text-[1.5em] text-text-subdued" />}
@@ -89,19 +90,19 @@ export function SideBar() {
 
         <footer className="p-spacing-looser">
           <div className="mb-spacing-looser flex flex-wrap gap-spacing-tighter text-xs text-text-subdued">
-            <a href="#">Légal</a>
+            <Link href="#">Légal</Link>
 
-            <a href="#">Centre de sécurité et de confidentialité</a>
+            <Link href="#">Centre de sécurité et de confidentialité</Link>
 
-            <a href="#">Protection des données</a>
+            <Link href="#">Protection des données</Link>
 
-            <a href="#">Paramètre des cookies</a>
+            <Link href="#">Paramètre des cookies</Link>
 
-            <a href="#">À propos des pubs</a>
+            <Link href="#">À propos des pubs</Link>
 
-            <a href="#">Accessibilité</a>
+            <Link href="#">Accessibilité</Link>
 
-            <a href="#">Cookies</a>
+            <Link href="#">Cookies</Link>
           </div>
 
           <Button variant="outlined">
