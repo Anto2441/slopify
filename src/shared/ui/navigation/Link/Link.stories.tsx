@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { HiOutlineArrowDownCircle } from "react-icons/hi2";
 
 import { buttonVariants } from "../../inputs/Button/Button";
 import { Link } from "./Link";
@@ -19,5 +20,16 @@ export const Default: Story = {};
 export const AsButton: Story = {
   args: {
     className: buttonVariants({ variant: "accent" }),
+  },
+};
+
+export const WithIconBefore: Story = {
+  args: {
+    children: (
+      <>
+        <HiOutlineArrowDownCircle />
+        Click me
+      </>
+    ),
   },
 };

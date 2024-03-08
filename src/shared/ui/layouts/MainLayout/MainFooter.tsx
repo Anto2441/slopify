@@ -10,48 +10,118 @@ export function MainFooter() {
         <div className="mb-spacing-looser-3 grid gap-spacing-tighter space-y-spacing-base md:mb-0 md:grid-cols-3 md:space-y-0">
           <nav>
             <p className="font-bold">Société</p>
-            <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2 text-text-subdued">
+            <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2">
               <li>
-                <Link href="/">À propos</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  À propos
+                </Link>
               </li>
               <li>
-                <Link href="/">Offres d&apos;emploi</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Offres d&apos;emploi
+                </Link>
               </li>
               <li>
-                <Link href="/">For the record</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  For the record
+                </Link>
               </li>
             </ul>
           </nav>
 
           <nav>
             <p className="font-bold">Communautés</p>
-            <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2 text-text-subdued">
+            <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2">
               <li>
-                <Link href="/">Espace artistes</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Espace artistes
+                </Link>
               </li>
               <li>
-                <Link href="/">Développeurs</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Développeurs
+                </Link>
               </li>
               <li>
-                <Link href="/">Campagnes publicitaires</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Campagnes publicitaires
+                </Link>
               </li>
               <li>
-                <Link href="/">Investisseurs</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Investisseurs
+                </Link>
               </li>
               <li>
-                <Link href="/">Fournisseurs</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Fournisseurs
+                </Link>
               </li>
             </ul>
           </nav>
 
           <nav>
             <p className="font-bold">Liens utiles</p>
-            <ul className="mt-spacing-tighter-2 flex flex-col space-y-spacing-tighter-2 text-text-subdued">
+            <ul className="mt-spacing-tighter-2 flex flex-col space-y-spacing-tighter-2">
               <li>
-                <Link href="/">Assistance</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Assistance
+                </Link>
               </li>
               <li>
-                <Link href="/">Appli mobile gratuite</Link>
+                <Link
+                  href="/"
+                  underline="hover"
+                  target="_blank"
+                  variant="muted"
+                >
+                  Appli mobile gratuite
+                </Link>
               </li>
             </ul>
           </nav>

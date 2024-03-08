@@ -22,7 +22,7 @@ export function SignInPage() {
 
         <Link
           href="#"
-          className="ml-spacing-tighter-2 text-center text-text-base underline"
+          className="ml-spacing-tighter-2 text-center text-text-base underline hover:text-text-bright-accent"
         >
           Sign up for Slopify
         </Link>

@@ -1,4 +1,5 @@
-import { Button } from "@/shared/ui";
+import { buttonVariants } from "../../inputs/Button/Button";
+import { Link } from "../../navigation";
 
 export function Footer() {
   return (
@@ -12,9 +13,9 @@ export function Footer() {
         </p>
       </div>
 
-      <Button variant="inverted-light" size="large">
+      <Link href="#" className={buttonVariants({ variant: "inverted-light" })}>
         S&apos;inscrire gratuitement
-      </Button>
+      </Link>
     </div>
   );
 }

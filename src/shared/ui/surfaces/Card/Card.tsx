@@ -39,12 +39,15 @@ export function Card({ roundedPicture }: CardProps) {
           </IconButton>
         </div>
         <div className="mt-spacing-base">
-          <Link href="#" className="font-bold text-text-base">
-            Todays Top Hits
-          </Link>
-          <span className="line-clamp-2 text-font-size-smaller font-semibold text-text-subdued">
+          <span className="font-bold text-text-base">Todays Top Hits</span>
+          <Link
+            href="#"
+            className="line-clamp-2 text-font-size-smaller font-semibold"
+            underline="hover"
+            variant="muted"
+          >
             Tate McRae is on top of the Hottest 50!
-          </span>
+          </Link>
         </div>
       </Paper>
     </div>

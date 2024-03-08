@@ -4,7 +4,7 @@ import React from "react";
 import { disabledInput, focusRing, focusVisibleRing } from "../../utils";
 
 export const buttonVariants = cva({
-  base: `inline-flex items-center justify-center gap-spacing-tighter-4 rounded-full font-bold leading-tight transition-all duration-[33ms] hover:scale-105 active:scale-100 [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
+  base: `inline-flex items-center justify-center gap-spacing-tighter-4 rounded-full text-center font-bold leading-tight transition-all duration-[33ms] hover:scale-105 active:scale-100 [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
 
   defaultVariants: {
     disabled: false,

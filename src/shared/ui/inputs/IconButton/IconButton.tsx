@@ -1,6 +1,5 @@
 import { cva, type VariantProps } from "cva";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 import { disabledInput, focusVisibleRing } from "../../utils";
 
@@ -47,14 +46,12 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
     return (
       <button
         {...props}
-        className={twMerge(
-          iconButtonVariants({
-            className,
-            disabled: props.disabled,
-            size,
-            variant,
-          }),
-        )}
+        className={iconButtonVariants({
+          className,
+          disabled: props.disabled,
+          size,
+          variant,
+        })}
         ref={ref}
       />
     );
