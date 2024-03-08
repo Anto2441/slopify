@@ -1,5 +1,4 @@
 import { cva, type VariantProps } from "cva";
-import { twMerge } from "tailwind-merge";
 
 const paperVariants = cva({
   base: `rounded-lg p-spacing-tighter-2`,
@@ -27,8 +26,6 @@ interface PaperProps extends VariantProps<typeof paperVariants> {
  */
 export function Paper({ children, className, variant }: PaperProps) {
   return (
-    <div className={twMerge(paperVariants({ className, variant }))}>
-      {children}
-    </div>
+    <div className={paperVariants({ className, variant })}>{children}</div>
   );
 }

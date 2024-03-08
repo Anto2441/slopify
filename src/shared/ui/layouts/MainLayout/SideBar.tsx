@@ -8,6 +8,7 @@ import {
 
 import { SlopifyLogo } from "../../data-display";
 import { Button, IconButton } from "../../inputs";
+import { buttonVariants } from "../../inputs/Button/Button";
 import { Link } from "../../navigation";
 import { Paper } from "../../surfaces";
 
@@ -17,26 +18,28 @@ export function SideBar() {
       <Paper className="shrink-0 px-spacing-looser pb-spacing-base pt-spacing-looser">
         <SlopifyLogo />
 
-        <ul className="mt-spacing-looser space-y-spacing-base text-text-subdued">
+        <ul className="mt-spacing-looser space-y-spacing-base">
           <li>
             <Link
               href="#"
-              className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
+              className="space-x-spacing-base font-bold transition-colors duration-200"
+              variant="muted"
             >
               <HiHome className="text-[1.5em]" />
 
-              <span className="ml-spacing-base">Accueil</span>
+              <span>Accueil</span>
             </Link>
           </li>
 
           <li>
             <Link
               href="#"
-              className="inline-flex items-center space-x-spacing-base font-bold transition-colors duration-200 hover:text-text-base"
+              className="space-x-spacing-base font-bold transition-colors duration-200"
+              variant="muted"
             >
               <HiMagnifyingGlass className="text-[1.5em]" />
 
-              <span className="ml-spacing-base">Rechercher</span>
+              <span>Rechercher</span>
             </Link>
           </li>
         </ul>
@@ -46,11 +49,12 @@ export function SideBar() {
         <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
           <Link
             href="#"
-            className="inline-flex items-center space-x-spacing-tighter font-bold text-text-subdued transition-colors duration-200 hover:text-text-base"
+            className="space-x-spacing-tighter font-bold transition-colors duration-200"
+            variant="muted"
           >
             <HiRectangleStack className="text-[1.5em]" />
 
-            <span className="ml-spacing-tighter">Bibliothèque</span>
+            <span>Bibliothèque</span>
           </Link>
 
           <IconButton size="small" variant="ghost">
@@ -85,24 +89,49 @@ export function SideBar() {
             <Button className="mt-spacing-looser" variant="inverted-light">
               Parcourir les podcasts
             </Button>
+
+            <Link
+              className={buttonVariants({
+                className: "mt-spacing-looser",
+                variant: "inverted-light",
+                size: "medium",
+              })}
+              href="#"
+            >
+              Parcourir les podcasts
+            </Link>
           </Paper>
         </div>
 
         <footer className="p-spacing-looser">
           <div className="mb-spacing-looser flex flex-wrap gap-spacing-tighter text-xs text-text-subdued">
-            <Link href="#">Légal</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Légal
+            </Link>
 
-            <Link href="#">Centre de sécurité et de confidentialité</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Centre de sécurité et de confidentialité
+            </Link>
 
-            <Link href="#">Protection des données</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Protection des données
+            </Link>
 
-            <Link href="#">Paramètre des cookies</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Paramètre des cookies
+            </Link>
 
-            <Link href="#">À propos des pubs</Link>
+            <Link href="#" underline="hover" target="_blank">
+              À propos des pubs
+            </Link>
 
-            <Link href="#">Accessibilité</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Accessibilité
+            </Link>
 
-            <Link href="#">Cookies</Link>
+            <Link href="#" underline="hover" target="_blank">
+              Cookies
+            </Link>
           </div>
 
           <Button variant="outlined">

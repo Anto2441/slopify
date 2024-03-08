@@ -1,6 +1,8 @@
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
-import { Button, IconButton } from "@/shared/ui";
+import { IconButton } from "../../inputs";
+import { buttonVariants } from "../../inputs/Button/Button";
+import { Link } from "../../navigation";
 
 export function NavBar() {
   return (
@@ -27,46 +29,61 @@ export function NavBar() {
           <li className="hidden md:mr-spacing-base md:list-item">
             <ul className="flex">
               <li>
-                {/* TODO: replace with Link */}
-                <Button
-                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
-                  size="large"
+                <Link
+                  href="#"
+                  className={buttonVariants({
+                    size: "large",
+                    className:
+                      "px-spacing-tighter-3 py-spacing-tighter tracking-widest",
+                  })}
                 >
                   Premium
-                </Button>
+                </Link>
               </li>
               <li>
-                {/* TODO: replace with Link */}
-                <Button
-                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
-                  size="large"
+                <Link
+                  href="#"
+                  className={buttonVariants({
+                    size: "large",
+                    className:
+                      "px-spacing-tighter-3 py-spacing-tighter tracking-widest",
+                  })}
                 >
                   Assistance
-                </Button>
+                </Link>
               </li>
               <li>
-                {/* TODO: replace with Link */}
-                <Button
-                  className="px-spacing-tighter-3 py-spacing-tighter tracking-widest"
-                  size="large"
+                <Link
+                  href="#"
+                  className={buttonVariants({
+                    size: "large",
+                    className:
+                      "px-spacing-tighter-3 py-spacing-tighter tracking-widest",
+                  })}
                 >
                   Télécharger
-                </Button>
+                </Link>
               </li>
             </ul>
           </li>
           <li>
             <ul className="flex items-center">
               <li>
-                {/* TODO: replace with Link */}
-                <Button size="large">S&apos;inscrire</Button>
+                <Link href="#" className={buttonVariants({ size: "large" })}>
+                  S&apos;inscrire
+                </Link>
               </li>
 
               <li>
-                {/* TODO: replace with Link */}
-                <Button variant="inverted-light" size="large">
+                <Link
+                  href="#"
+                  className={buttonVariants({
+                    size: "large",
+                    variant: "inverted-light",
+                  })}
+                >
                   Se connecter
-                </Button>
+                </Link>
               </li>
             </ul>
           </li>

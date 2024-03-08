@@ -51,7 +51,10 @@ export function SignInForm() {
 
       <SignInButton className="my-spacing-looser" />
 
-      <Link href="#" className="self-center text-text-base underline">
+      <Link
+        href="#"
+        className="self-center font-semibold text-text-base underline hover:text-text-bright-accent"
+      >
         Forgot your password?
       </Link>
     </form>

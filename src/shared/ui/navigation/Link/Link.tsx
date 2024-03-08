@@ -1,12 +1,11 @@
 import { cva, type VariantProps } from "cva";
 import NextLink from "next/link";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 import { focusVisibleRing } from "../../utils";
 
 const linkVariants = cva({
-  base: `${focusVisibleRing()}`,
+  base: `inline-flex items-center justify-center gap-spacing-tighter-4 align-baseline [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
 
   defaultVariants: {
     underline: `none`,
@@ -41,7 +40,7 @@ export const Link = React.forwardRef<
   return (
     <NextLink
       {...props}
-      className={twMerge(linkVariants({ className, underline, variant }))}
+      className={linkVariants({ className, underline, variant })}
       ref={ref}
     >
       {children}
