@@ -144,7 +144,7 @@ export function MainFooter() {
 
       <hr className="my-spacing-looser-2 h-px border-0 bg-white/10" />
 
-      <span className="text-sm text-text-subdued">© 2024 Slopify YZ</span>
+      <span className="text-sm text-color-subdued">© 2024 Slopify YZ</span>
     </div>
   );
 }

@@ -21,7 +21,7 @@ const linkVariants = cva({
     variant: {
       base: ``,
       inherit: ``,
-      muted: `text-text-subdued hover:text-text-base`,
+      muted: `text-color-subdued hover:text-color-base`,
     },
   },
 });

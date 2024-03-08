@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} bg-black font-sans text-text-base antialiased`}
+        className={`${figtree.variable} bg-black font-sans text-color-base antialiased`}
       >
         {children}
       </body>

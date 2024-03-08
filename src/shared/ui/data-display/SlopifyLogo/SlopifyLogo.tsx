@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "cva";
 import { Image } from "../Image/Image";
 
 const slopifyLogoVariants = cva({
-  base: `flex items-center gap-spacing-tighter-4 font-bold text-text-base`,
+  base: `flex items-center gap-spacing-tighter-4 font-bold text-color-base`,
 
   defaultVariants: {
     size: "medium",

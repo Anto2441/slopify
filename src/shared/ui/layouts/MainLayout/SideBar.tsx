@@ -104,7 +104,7 @@ export function SideBar() {
         </div>
 
         <footer className="p-spacing-looser">
-          <div className="mb-spacing-looser flex flex-wrap gap-spacing-tighter text-xs text-text-subdued">
+          <div className="mb-spacing-looser flex flex-wrap gap-spacing-tighter text-xs text-color-subdued">
             <Link href="#" underline="hover" target="_blank">
               Légal
             </Link>
