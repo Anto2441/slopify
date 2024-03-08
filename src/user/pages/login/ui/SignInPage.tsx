@@ -16,13 +16,13 @@ export function SignInPage() {
       <hr className="hidden md:my-spacing-looser md:block md:border-t md:border-white/10" />
 
       <div className="py-spacing-base text-center font-semibold">
-        <span className="mb-spacing-tighter-4 block text-text-subdued md:mb-0 md:inline">
+        <span className="mb-spacing-tighter-4 block text-color-subdued md:mb-0 md:inline">
           Don&apos;t have an account?
         </span>
 
         <Link
           href="#"
-          className="ml-spacing-tighter-2 text-center text-text-base underline hover:text-text-bright-accent"
+          className="ml-spacing-tighter-2 text-center text-color-base underline hover:text-color-bright-accent"
         >
           Sign up for Slopify
         </Link>

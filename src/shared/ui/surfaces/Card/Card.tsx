@@ -39,7 +39,7 @@ export function Card({ roundedPicture }: CardProps) {
           </IconButton>
         </div>
         <div className="mt-spacing-base">
-          <span className="font-bold text-text-base">Todays Top Hits</span>
+          <span className="font-bold text-color-base">Todays Top Hits</span>
           <Link
             href="#"
             className="line-clamp-2 text-font-size-smaller font-semibold"

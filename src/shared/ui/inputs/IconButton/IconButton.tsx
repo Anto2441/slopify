@@ -24,13 +24,13 @@ const iconButtonVariants = cva({
     },
 
     variant: {
-      accent: `theme-accent bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
-      ghost: `bg-transparent text-text-subdued hover:bg-background-highlight hover:text-text-base active:bg-background-tinted-press`,
-      text: `bg-transparent text-text-subdued hover:text-text-base active:text-text-subdued`,
-      tinted: `bg-background-tinted-base hover:bg-background-tinted-highlight hover:text-text-base active:bg-background-tinted-press`,
-      "over-media": `theme-over-media bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
-      "inverted-dark": `theme-inverted-dark bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
-      "inverted-light": `theme-inverted-light bg-background-base text-text-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      accent: `theme-accent bg-background-base text-color-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      ghost: `bg-transparent text-color-subdued hover:bg-background-highlight hover:text-color-base active:bg-background-tinted-press`,
+      text: `bg-transparent text-color-subdued hover:text-color-base active:text-color-subdued`,
+      tinted: `bg-background-tinted-base hover:bg-background-tinted-highlight hover:text-color-base active:bg-background-tinted-press`,
+      "over-media": `theme-over-media bg-background-base text-color-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      "inverted-dark": `theme-inverted-dark bg-background-base text-color-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
+      "inverted-light": `theme-inverted-light bg-background-base text-color-base hover:scale-105 hover:bg-background-highlight active:scale-100 active:bg-background-press`,
     },
   },
 });

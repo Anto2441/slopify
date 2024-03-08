@@ -19,7 +19,7 @@ export function SignInForm() {
       />
 
       {state.errors?.email && (
-        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-text-base">
+        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-color-base">
           {state.errors.email}
         </p>
       )}
@@ -27,7 +27,10 @@ export function SignInForm() {
       <Input
         className="mt-spacing-base"
         icon={
-          <HiEyeSlash className="size-5 text-text-subdued" aria-hidden="true" />
+          <HiEyeSlash
+            className="size-5 text-color-subdued"
+            aria-hidden="true"
+          />
         }
         id="password"
         label="Password"
@@ -35,7 +38,7 @@ export function SignInForm() {
       />
 
       {state.errors?.password && (
-        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-text-base">
+        <p className="mt-spacing-tighter-2 text-font-size-smaller font-semibold text-color-base">
           {state.errors.password}
         </p>
       )}
@@ -53,7 +56,7 @@ export function SignInForm() {
 
       <Link
         href="#"
-        className="self-center font-semibold text-text-base underline hover:text-text-bright-accent"
+        className="self-center font-semibold text-color-base underline hover:text-color-bright-accent"
       >
         Forgot your password?
       </Link>

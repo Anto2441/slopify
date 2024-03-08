@@ -24,11 +24,11 @@ export const buttonVariants = cva({
     },
 
     variant: {
-      accent: `theme-accent bg-background-base text-text-base hover:bg-background-highlight active:bg-background-press`,
-      text: `bg-transparent text-text-subdued hover:text-text-base active:text-text-subdued`,
-      "inverted-light": `theme-inverted-light bg-background-base text-text-base hover:bg-background-highlight active:bg-background-press`,
-      outlined: `border border-text-subdued bg-transparent text-text-base hover:border-text-base active:border-text-subdued active:text-text-subdued`,
-      "over-media": `theme-over-media bg-background-base text-text-base hover:bg-background-highlight active:bg-background-press`,
+      accent: `theme-accent bg-background-base text-color-base hover:bg-background-highlight active:bg-background-press`,
+      text: `bg-transparent text-color-subdued hover:text-color-base active:text-color-subdued`,
+      "inverted-light": `theme-inverted-light bg-background-base text-color-base hover:bg-background-highlight active:bg-background-press`,
+      outlined: `border border-color-subdued bg-transparent text-color-base hover:border-color-base active:border-color-subdued active:text-color-subdued`,
+      "over-media": `theme-over-media bg-background-base text-color-base hover:bg-background-highlight active:bg-background-press`,
     },
 
     withFocusRing: {

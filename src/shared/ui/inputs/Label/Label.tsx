@@ -23,7 +23,7 @@ export const Label = React.forwardRef<
     <LabelPrimitive.Root
       {...props}
       ref={ref}
-      className={twJoin(`font-semibold text-text-base`, className)}
+      className={twJoin(`font-semibold text-color-base`, className)}
     />
   );
 });

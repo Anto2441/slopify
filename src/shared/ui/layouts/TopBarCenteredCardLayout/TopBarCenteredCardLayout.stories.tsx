@@ -4,7 +4,7 @@ import { TopBarCenteredCardLayout } from "./TopBarCenteredCardLayout";
 
 const meta = {
   args: {
-    children: <h1 className="text-text-base">Log in to Spotify</h1>,
+    children: <h1 className="text-color-base">Log in to Spotify</h1>,
   },
   component: TopBarCenteredCardLayout,
 } satisfies Meta<typeof TopBarCenteredCardLayout>;
