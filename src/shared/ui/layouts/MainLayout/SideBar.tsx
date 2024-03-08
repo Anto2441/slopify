@@ -53,9 +53,9 @@ export function SideBar() {
             <span className="ml-spacing-tighter">Bibliothèque</span>
           </Link>
 
-          <IconButton
-            icon={<HiPlus className="text-[1.5em] text-text-subdued" />}
-          />
+          <IconButton size="small" variant="ghost">
+            <HiPlus />
+          </IconButton>
         </header>
 
         <div className="grow space-y-spacing-looser overflow-scroll">
