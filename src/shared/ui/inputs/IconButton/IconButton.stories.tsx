@@ -4,7 +4,7 @@ import { HiPlay } from "react-icons/hi2";
 import { IconButton } from "./IconButton";
 
 const meta = {
-  args: { children: <HiPlay /> },
+  args: { children: <HiPlay />, tooltip: "Play song" },
   component: IconButton,
 } satisfies Meta<typeof IconButton>;
 

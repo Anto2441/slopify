@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from "cva";
 import React from "react";
 
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../data-display";
 import { disabledInput, focusVisibleRing } from "../../utils";
 
 const iconButtonVariants = cva({
@@ -36,24 +37,38 @@ const iconButtonVariants = cva({
 });
 
 type IconButtonProps = React.ComponentPropsWithoutRef<"button"> &
-  VariantProps<typeof iconButtonVariants>;
+  VariantProps<typeof iconButtonVariants> & {
+    /**
+     * The text content of the tooltip displayed on hover. It is mandatory for accessibility reasons.
+     */
+    tooltip: React.ReactNode;
+  };
 
 /**
- * Renders an icon button
+ * Renders an icon button with a tooltip displayed on hover. The `tooltip` prop is mandatory
+ * for accessibility reasons.
+ *
+ * It provides a text alternative for the icon that is not perceivable by sight.
  */
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
-  function IconButton({ className, size, variant, ...props }, ref) {
+  function IconButton({ className, size, tooltip, variant, ...props }, ref) {
     return (
-      <button
-        {...props}
-        className={iconButtonVariants({
-          className,
-          disabled: props.disabled,
-          size,
-          variant,
-        })}
-        ref={ref}
-      />
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <button
+            {...props}
+            className={iconButtonVariants({
+              className,
+              disabled: props.disabled,
+              size,
+              variant,
+            })}
+            ref={ref}
+          />
+        </TooltipTrigger>
+
+        <TooltipContent>{tooltip}</TooltipContent>
+      </Tooltip>
     );
   },
 );
