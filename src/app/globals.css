@@ -33,6 +33,8 @@
     --decorative-base: #fff;
     --decorative-subdued: #292929;
 
+    --font-family-sans: "Figtree", sans-serif;
+
     --font-size-smaller-2: 0.6875rem;
     --font-size-smaller: 0.8125rem;
     --font-size-base: 1rem;
