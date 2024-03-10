@@ -7,7 +7,7 @@ import "@/app/globals.css";
 export const WithTailwind: Decorator = (Story) => {
   return (
     <div
-      className={`${figtree.variable} bg-black font-sans text-color-base antialiased`}
+      className={`${figtree.variable} rounded-lg bg-background-base p-spacing-base font-sans text-color-base antialiased`}
     >
       <Story />
     </div>

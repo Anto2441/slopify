@@ -123,7 +123,7 @@ const config = {
     },
 
     fontFamily: {
-      sans: ["var(--font-figtree)"],
+      sans: ["var(--font-family-sans)"],
     },
   },
 
