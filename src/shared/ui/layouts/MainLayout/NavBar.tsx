@@ -11,14 +11,19 @@ export function NavBar() {
         <ul className="flex space-x-spacing-tighter-2">
           <li>
             {/* TODO: replace with Link */}
-            <IconButton disabled size="small" variant="over-media">
+            <IconButton
+              disabled
+              size="small"
+              tooltip="Go back"
+              variant="over-media"
+            >
               <HiChevronLeft />
             </IconButton>
           </li>
 
           <li>
             {/* TODO: replace with Link */}
-            <IconButton size="small" variant="over-media">
+            <IconButton size="small" tooltip="Go forward" variant="over-media">
               <HiChevronRight />
             </IconButton>
           </li>

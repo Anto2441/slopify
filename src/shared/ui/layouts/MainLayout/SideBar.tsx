@@ -57,7 +57,11 @@ export function SideBar() {
             <span>Bibliothèque</span>
           </Link>
 
-          <IconButton size="small" variant="ghost">
+          <IconButton
+            size="small"
+            tooltip="Create playlist or folder"
+            variant="ghost"
+          >
             <HiPlus />
           </IconButton>
         </header>

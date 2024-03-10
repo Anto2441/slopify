@@ -128,15 +128,15 @@ export function MainFooter() {
         </div>
 
         <div className="space-x-spacing-base">
-          <IconButton variant="tinted">
+          <IconButton tooltip="Instagram" variant="tinted">
             <HiCamera />
           </IconButton>
 
-          <IconButton variant="tinted">
+          <IconButton tooltip="Twitter" variant="tinted">
             <HiBolt />
           </IconButton>
 
-          <IconButton variant="tinted">
+          <IconButton tooltip="Facebook" variant="tinted">
             <HiLightBulb />
           </IconButton>
         </div>
