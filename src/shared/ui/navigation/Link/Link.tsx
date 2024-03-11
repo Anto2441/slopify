@@ -5,7 +5,7 @@ import React from "react";
 import { focusVisibleRing } from "../../utils";
 
 const linkVariants = cva({
-  base: `inline-flex items-center justify-center gap-spacing-tighter-4 align-baseline [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
+  base: `inline-flex items-center gap-spacing-tighter-4 align-baseline [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
 
   defaultVariants: {
     underline: `none`,

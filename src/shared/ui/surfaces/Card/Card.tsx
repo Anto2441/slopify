@@ -8,7 +8,8 @@ import { Paper } from "../Paper/Paper";
 
 export interface CardProps {
   /**
-   * Whether or not to round the top corners of the image.
+   * Whether the image should be rounded.
+   * @default false
    */
   roundedPicture?: boolean;
 }
@@ -18,7 +19,7 @@ export interface CardProps {
  */
 export function Card({ roundedPicture }: CardProps) {
   return (
-    <div className="group p-spacing-looser">
+    <div className="group max-w-max p-spacing-looser">
       <Paper className="p-spacing-base" variant="tinted">
         <div className="relative">
           <Image
@@ -39,7 +40,7 @@ export function Card({ roundedPicture }: CardProps) {
             <HiPlay />
           </IconButton>
         </div>
-        <div className="mt-spacing-base">
+        <div className="mt-spacing-base flex flex-col">
           <span className="font-bold text-color-base">Todays Top Hits</span>
           <Link
             href="#"
