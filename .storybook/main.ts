@@ -4,6 +4,7 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    // ⚠️ It must be declared AFTER @storybook/addon-essentials
     "@storybook/addon-interactions",
   ],
 
@@ -11,13 +12,13 @@ const config: StorybookConfig = {
     autodocs: true,
   },
 
+  features: {
+    experimentalRSC: true,
+  },
+
   framework: {
     name: "@storybook/nextjs",
-    options: {
-      builder: {
-        useSWC: true,
-      },
-    },
+    options: {},
   },
 
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
