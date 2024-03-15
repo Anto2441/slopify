@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import { Switch } from "./Switch";
 
@@ -15,7 +16,7 @@ export const Controlled: Story = {
     checked: false,
   },
   argTypes: {
-    onCheckedChange: { action: "checked" },
+    onCheckedChange: fn(),
   },
 };
 

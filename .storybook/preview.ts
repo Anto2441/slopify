@@ -7,7 +7,7 @@ const preview: Preview = {
   decorators: [WithTailwind],
 
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: "^on.*" },
 
     backgrounds: { disable: true },
 
