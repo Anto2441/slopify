@@ -5,7 +5,7 @@ import { Link } from "../../navigation";
 
 export function MainFooter() {
   return (
-    <div className="flex flex-col px-spacing-looser-3 pb-spacing-looser-4 pt-spacing-tighter-2">
+    <div className="flex flex-col px-spacing-looser pb-spacing-looser-4 pt-spacing-tighter-2">
       <div className="flex flex-wrap justify-between pt-spacing-looser-4">
         <div className="mb-spacing-looser-3 grid gap-spacing-tighter space-y-spacing-base md:mb-0 md:grid-cols-3 md:space-y-0">
           <nav>
