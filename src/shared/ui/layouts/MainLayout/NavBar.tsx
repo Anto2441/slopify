@@ -6,7 +6,7 @@ import { Link } from "../../navigation";
 
 export function NavBar() {
   return (
-    <div className="flex items-center justify-between px-spacing-looser">
+    <div className="flex items-center justify-between px-spacing-base">
       <nav>
         <ul className="flex space-x-spacing-tighter-2">
           <li>

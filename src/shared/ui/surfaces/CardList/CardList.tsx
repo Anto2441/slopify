@@ -5,7 +5,7 @@ import { Card } from "../Card/Card";
  */
 export function CardList() {
   return (
-    <div className="grid grid-cols-5">
+    <div className="grid grid-cols-5 gap-spacing-looser">
       <Card />
       <Card roundedPicture />
       <Card />

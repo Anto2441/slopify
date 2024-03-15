@@ -15,7 +15,7 @@ import { Paper } from "../../surfaces";
 export function SideBar() {
   return (
     <nav className="flex h-full w-[345px] shrink-0 flex-col">
-      <Paper className="shrink-0 px-spacing-looser pb-spacing-base pt-spacing-looser">
+      <Paper className="shrink-0 pb-spacing-base" padding="looser">
         <SlopifyLogo />
 
         <ul className="mt-spacing-looser space-y-spacing-base">
@@ -45,7 +45,7 @@ export function SideBar() {
         </ul>
       </Paper>
 
-      <Paper className="mt-2 flex grow flex-col overflow-hidden pt-spacing-base">
+      <Paper className="mt-2 flex grow flex-col overflow-hidden">
         <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
           <Link
             href="#"
@@ -67,7 +67,7 @@ export function SideBar() {
         </header>
 
         <div className="grow space-y-spacing-looser overflow-scroll">
-          <Paper className="px-spacing-base py-spacing-base" variant="elevated">
+          <Paper variant="elevated">
             <span className="block font-bold">
               Créez votre première playlist
             </span>
@@ -81,7 +81,7 @@ export function SideBar() {
             </Button>
           </Paper>
 
-          <Paper className="px-spacing-base py-spacing-base" variant="elevated">
+          <Paper variant="elevated">
             <span className="block font-bold">
               Cherchons quelques podcasts auxquels vous abonner
             </span>

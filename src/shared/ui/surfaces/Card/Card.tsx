@@ -19,39 +19,37 @@ export interface CardProps {
  */
 export function Card({ roundedPicture }: CardProps) {
   return (
-    <div className="group max-w-max p-spacing-looser">
-      <Paper className="p-spacing-base" variant="tinted">
-        <div className="relative">
-          <Image
-            src="https://picsum.photos/300/300"
-            width={300}
-            height={300}
-            alt=""
-            className={twJoin(
-              `rounded-border-radius-larger`,
-              roundedPicture && `rounded-full`,
-            )}
-          />
-          <IconButton
-            tooltip="Play Todays Top Hits"
-            variant="accent"
-            className="absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100"
-          >
-            <HiPlay />
-          </IconButton>
-        </div>
-        <div className="mt-spacing-base flex flex-col">
-          <span className="font-bold text-color-base">Todays Top Hits</span>
-          <Link
-            href="#"
-            className="line-clamp-2 text-font-size-smaller font-semibold"
-            underline="hover"
-            variant="muted"
-          >
-            Tate McRae is on top of the Hottest 50!
-          </Link>
-        </div>
-      </Paper>
-    </div>
+    <Paper className="group max-w-max" variant="tinted">
+      <div className="relative">
+        <Image
+          src="https://picsum.photos/300/300"
+          width={300}
+          height={300}
+          alt=""
+          className={twJoin(
+            `rounded-border-radius-larger`,
+            roundedPicture && `rounded-full`,
+          )}
+        />
+        <IconButton
+          tooltip="Play Todays Top Hits"
+          variant="accent"
+          className="absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          <HiPlay />
+        </IconButton>
+      </div>
+      <div className="mt-spacing-base flex flex-col">
+        <span className="font-bold text-color-base">Todays Top Hits</span>
+        <Link
+          href="#"
+          className="line-clamp-2 text-font-size-smaller font-semibold"
+          underline="hover"
+          variant="muted"
+        >
+          Tate McRae is on top of the Hottest 50!
+        </Link>
+      </div>
+    </Paper>
   );
 }

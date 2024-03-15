@@ -14,7 +14,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       <div className="flex h-full w-full flex-1 grow gap-spacing-tighter-2 ">
         <SideBar />
 
-        <Paper className="relative w-full">
+        <Paper className="relative w-full" padding="none">
           <NavBar />
 
           {children}
