@@ -3,7 +3,7 @@ import { CardList } from "@/shared/ui/surfaces/CardList/CardList";
 
 export function HomePage() {
   return (
-    <main className="mt-spacing-tighter-2 bg-gradient-to-b from-background-tinted-base to-background-base px-[20px]">
+    <main className="mt-spacing-tighter-2 bg-gradient-to-b from-background-tinted-base to-background-base px-spacing-base">
       <div className="flex justify-between">
         <Link
           href="#"
