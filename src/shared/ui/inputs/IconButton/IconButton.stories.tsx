@@ -12,4 +12,48 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+type IconButtonProps = React.ComponentProps<typeof IconButton>;
+
+const iconVariants: IconButtonProps["variant"][] = [
+  "accent",
+  "ghost",
+  "inverted-dark",
+  "inverted-light",
+  "over-media",
+  "text",
+  "tinted",
+];
+
+const iconSizes: IconButtonProps["size"][] = [
+  "small",
+  "medium",
+  "large",
+  "xlarge",
+];
+
+export const Default: Story = {
+  render: function Render() {
+    return (
+      <div className="space-y-spacing-base">
+        {iconVariants.map((variant) => {
+          return (
+            <div className="space-x-spacing-tighter-2" key={variant}>
+              {iconSizes.map((size) => {
+                return (
+                  <IconButton
+                    key={size}
+                    size={size}
+                    tooltip={`${variant} - ${size}`}
+                    variant={variant}
+                  >
+                    <HiPlay />
+                  </IconButton>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    );
+  },
+};

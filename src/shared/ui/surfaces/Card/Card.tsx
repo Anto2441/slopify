@@ -32,9 +32,10 @@ export function Card({ roundedPicture }: CardProps) {
           )}
         />
         <IconButton
+          className="absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+          size="large"
           tooltip="Play Todays Top Hits"
           variant="accent"
-          className="absolute bottom-spacing-tighter-2 right-spacing-tighter-2 translate-y-spacing-tighter-2 opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         >
           <HiPlay />
         </IconButton>

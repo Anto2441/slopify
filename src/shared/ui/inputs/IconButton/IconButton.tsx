@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "../../data-display";
 import { disabledInput, focusVisibleRing } from "../../utils";
 
 const iconButtonVariants = cva({
-  base: `rounded-full transition-all duration-200 [&>svg]:text-[1.3em] ${focusVisibleRing()}`,
+  base: `rounded-full transition-all duration-200 ${focusVisibleRing()}`,
 
   defaultVariants: {
     disabled: false,
@@ -19,9 +19,10 @@ const iconButtonVariants = cva({
     },
 
     size: {
-      small: `p-spacing-tighter-2`,
-      medium: `p-spacing-tighter`,
-      large: `p-spacing-base`,
+      small: `p-spacing-tighter-3 [&>svg]:size-5`,
+      medium: `p-spacing-tighter-2 [&>svg]:size-6`,
+      large: `p-spacing-tighter [&>svg]:size-6`,
+      xlarge: `p-spacing-tighter [&>svg]:size-8`,
     },
 
     variant: {

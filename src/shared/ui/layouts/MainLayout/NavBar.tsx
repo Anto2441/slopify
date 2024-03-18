@@ -8,7 +8,7 @@ export function NavBar() {
   return (
     <div className="flex items-center justify-between px-spacing-base">
       <nav>
-        <ul className="flex space-x-spacing-tighter-2">
+        <ul className="flex space-x-spacing-tighter-3">
           <li>
             {/* TODO: replace with Link */}
             <IconButton
