@@ -1,10 +1,10 @@
 import { CgMiniPlayer, CgPlayButtonR } from "react-icons/cg";
 import {
+  HiOutlineHeart,
   HiOutlineQueueList,
   HiOutlineSpeakerWave,
   HiPlay,
 } from "react-icons/hi2";
-import { IoMdHeartEmpty } from "react-icons/io";
 import { IoShuffle } from "react-icons/io5";
 import { LuMonitorSpeaker } from "react-icons/lu";
 import {
@@ -47,8 +47,8 @@ export function Player() {
           </Link>
         </div>
         <div>
-          <IconButton tooltip="Sauvergarder dans bibliothèque">
-            <IoMdHeartEmpty />
+          <IconButton size="small" tooltip="Save to your library">
+            <HiOutlineHeart />
           </IconButton>
         </div>
       </div>
@@ -56,23 +56,23 @@ export function Player() {
       <div className="flex w-[40%] max-w-[722px] shrink-0 flex-col items-center">
         <div>
           <IconButton tooltip="Random" size="small">
-            <IoShuffle size={30} />
+            <IoShuffle />
           </IconButton>
 
           <IconButton tooltip="Previous" size="small">
-            <MdSkipPrevious size={30} />
+            <MdSkipPrevious />
           </IconButton>
 
-          <IconButton tooltip="Play" variant="inverted-light">
+          <IconButton tooltip="Play" size="small" variant="inverted-light">
             <HiPlay />
           </IconButton>
 
           <IconButton tooltip="Next" size="small">
-            <MdSkipNext size={30} />
+            <MdSkipNext />
           </IconButton>
 
           <IconButton tooltip="Repeat" size="small">
-            <PiRepeat size={30} />
+            <PiRepeat />
           </IconButton>
         </div>
         <Seekbar />

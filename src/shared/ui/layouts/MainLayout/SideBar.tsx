@@ -45,8 +45,8 @@ export function SideBar() {
         </ul>
       </Paper>
 
-      <Paper className="mt-2 flex grow flex-col overflow-hidden">
-        <header className="mb-spacing-looser flex justify-between px-spacing-tighter">
+      <Paper className="mt-2 flex grow flex-col overflow-hidden pt-spacing-base">
+        <header className="mb-spacing-looser flex justify-between pl-spacing-tighter pr-spacing-tighter-2">
           <Link
             href="#"
             className="space-x-spacing-tighter font-bold transition-colors duration-200"
