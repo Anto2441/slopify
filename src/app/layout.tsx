@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { AuthSessionProvider } from "@/auth/providers/session-provider";
+
 import { figtree } from "./fonts";
 
 import "./globals.css";
@@ -17,7 +19,7 @@ export default function RootLayout({
       <body
         className={`${figtree.variable} bg-black font-sans text-color-base antialiased`}
       >
-        {children}
+        <AuthSessionProvider>{children}</AuthSessionProvider>
       </body>
     </html>
   );

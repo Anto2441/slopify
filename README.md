@@ -53,7 +53,9 @@ Running `pnpm test --coverage` starts the test runner, checks all test files and
 
 ## Development
 
-First, run the development server:
+First, ask a teammate to help you setup your local environment file.
+
+Then, run the development server:
 
 ### Run the app locally
 
