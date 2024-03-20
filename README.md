@@ -31,11 +31,9 @@ Running `pnpm format --write` fixes incorrect file formating
 
 ### Lint
 
-Running `pnpm lint` checks for javascript errors
-
-### Types
-
-Running `pnpm types` checks for type errors
+Running `pnpm lint:javascript` checks for javascript errors
+Running `pnpm lint:secrets` checks against committing credentials
+Running `pnpm lint:types` checks for type errors
 
 ### Start
 
