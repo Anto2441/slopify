@@ -1,5 +1,5 @@
-import { Link } from "@/shared/ui";
-import { CardList } from "@/shared/ui/surfaces/CardList/CardList";
+import { SignOutButton } from "@/auth/features/sign-out";
+import { CardList, Link } from "@/shared/ui";
 
 export function HomePage() {
   return (
@@ -20,7 +20,11 @@ export function HomePage() {
           Tout afficher
         </Link>
       </div>
+
       <CardList />
+
+      {/* TODO: remove it, just for development purpose */}
+      <SignOutButton size="large" variant="inverted-light" />
     </main>
   );
 }

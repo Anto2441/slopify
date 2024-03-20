@@ -66,7 +66,7 @@ export function NavBar() {
                       "px-spacing-tighter-3 py-spacing-tighter tracking-widest",
                   })}
                 >
-                  Télécharger
+                  Download
                 </Link>
               </li>
             </ul>
@@ -75,19 +75,21 @@ export function NavBar() {
             <ul className="flex items-center">
               <li>
                 <Link href="#" className={buttonVariants({ size: "large" })}>
-                  S&apos;inscrire
+                  Sign up
                 </Link>
               </li>
 
               <li>
                 <Link
-                  href="#"
+                  // TODO: replace href string with a getter function or from a route object map
+                  // Perhaps we could import a link component from the auth package instead? (we must be careful on our import rules if we're doing that)
+                  href="/login"
                   className={buttonVariants({
                     size: "large",
                     variant: "inverted-light",
                   })}
                 >
-                  Se connecter
+                  Log in
                 </Link>
               </li>
             </ul>
