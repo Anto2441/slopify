@@ -15,9 +15,8 @@ import {
 import { PiRepeat } from "react-icons/pi";
 import { TbMicrophone2 } from "react-icons/tb";
 
-import { IconButton } from "@/shared/ui";
+import { IconButton, InlineMediaCard } from "@/shared/ui";
 
-import { MainDetails } from "@/shared/ui/data-display/MainDetails/MainDetails";
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
@@ -28,12 +27,11 @@ export function Player() {
   return (
     <div className="flex items-center justify-between overflow-hidden">
       <div className="flex shrink-0 items-center">
-        <MainDetails
-          artist="artist"
+        <InlineMediaCard
           picture="https://picsum.photos/300/300"
           pictureTopRounded
-          pictureHeight={56}
-          pictureWidth={56}
+          pictureSize={56}
+          subtitle="artist"
           title="Song title"
         />
         <div>

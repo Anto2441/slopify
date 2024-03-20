@@ -1,33 +1,36 @@
 import { Image, Link } from "@/shared/ui";
 
-interface MainDetailsProps {
-  artist: string;
+export interface InlineMediaCardProps {
+  /** URL of the album cover picture. */
   picture: string;
-  pictureHeight: number;
+  /** Height and widthof the album cover picture. */
+  pictureSize: number;
+  /** Whether the picture should have a rounded top or not. */
   pictureTopRounded?: boolean;
-  pictureWidth: number;
+  /** Artist name of the album. */
+  subtitle: string;
+  /** Title of the album. */
   title: string;
 }
 
 /**
  * Renders the main details of an album, including the artist, picture, picture dimensions, title, and picture styling.
  */
-export function MainDetails({
-  artist,
+export function InlineMediaCard({
+  subtitle,
   picture,
-  pictureHeight,
+  pictureSize,
   pictureTopRounded,
-  pictureWidth,
   title,
-}: MainDetailsProps) {
+}: InlineMediaCardProps) {
   return (
     <div className="flex items-center ">
       <Image
-        alt="album cover"
+        alt="cover"
         className={`mr-spacing-tighter-2 ${pictureTopRounded ? "rounded-t-md" : "rounded-md"}`}
         src={picture}
-        height={pictureHeight}
-        width={pictureWidth}
+        height={pictureSize}
+        width={pictureSize}
       />
       <div className="mx-spacing-tighter-2 flex flex-col">
         <Link className="text-font-size-smaller" href="#" underline="hover">
@@ -38,7 +41,7 @@ export function MainDetails({
           href="#"
           underline="hover"
         >
-          {artist}
+          {subtitle}
         </Link>
       </div>
     </div>
