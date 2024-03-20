@@ -15,8 +15,9 @@ import {
 import { PiRepeat } from "react-icons/pi";
 import { TbMicrophone2 } from "react-icons/tb";
 
-import { IconButton, Image, Link } from "@/shared/ui";
+import { IconButton } from "@/shared/ui";
 
+import { MainDetails } from "@/shared/ui/data-display/MainDetails/MainDetails";
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
@@ -26,26 +27,15 @@ import { VolumeBar } from "./VolumeBar";
 export function Player() {
   return (
     <div className="flex items-center justify-between overflow-hidden">
-      <div className="flex w-[30%] min-w-[180px] shrink-0 items-center ">
-        <Image
-          className="mr-spacing-tighter-2 rounded-t-md"
-          src="https://picsum.photos/300/300"
-          alt="album cover"
-          width={56}
-          height={56}
+      <div className="flex shrink-0 items-center">
+        <MainDetails
+          artist="artist"
+          picture="https://picsum.photos/300/300"
+          pictureTopRounded
+          pictureHeight={56}
+          pictureWidth={56}
+          title="Song title"
         />
-        <div className="mx-spacing-tighter-2 flex flex-col">
-          <Link className="text-font-size-smaller" href="#" underline="hover">
-            Song title
-          </Link>
-          <Link
-            className="text-font-size-smaller-2 text-color-subdued"
-            href="#"
-            underline="hover"
-          >
-            Artist
-          </Link>
-        </div>
         <div>
           <IconButton size="small" tooltip="Save to your library">
             <HiOutlineHeart />
