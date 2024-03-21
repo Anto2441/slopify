@@ -1,4 +1,4 @@
-import { TopBarCenteredCardLayout } from "@/shared/ui";
+import { TopBarCenteredCardLayout } from "@/shared/ui/layouts";
 
 interface LayoutProps {
   children: React.ReactNode;

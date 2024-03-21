@@ -2,7 +2,8 @@
 
 import { HiEyeSlash } from "react-icons/hi2";
 
-import { Input, Label, Link, Switch } from "@/shared/ui";
+import { Input, Label, Switch } from "@/shared/ui/inputs";
+import { Link } from "@/shared/ui/navigation";
 
 import { useSignInWithCredentialsForm } from "../model/useSignInWithCredentialsForm";
 import { SignInButton } from "./SignInButton";

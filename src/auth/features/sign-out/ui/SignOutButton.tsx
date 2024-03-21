@@ -1,7 +1,7 @@
 "use client";
 
 import { signOut } from "@/auth/entities/session";
-import { Button } from "@/shared/ui";
+import { Button } from "@/shared/ui/inputs";
 
 interface SignOutButtonProps
   extends Pick<

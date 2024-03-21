@@ -2,7 +2,7 @@
 
 import { useFormStatus } from "react-dom";
 
-import { Button } from "@/shared/ui";
+import { Button } from "@/shared/ui/inputs";
 
 interface SignInButtonProps
   extends Pick<

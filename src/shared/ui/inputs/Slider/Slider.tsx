@@ -1,9 +1,9 @@
 "use client";
 
-import { disabledInput } from "@/shared/ui";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import * as React from "react";
 import { twJoin } from "tailwind-merge";
+import { disabledInput } from "../../utils";
 
 /**
  * The Slider component is a customizable slider input that allows the user to select a value from a range of values.

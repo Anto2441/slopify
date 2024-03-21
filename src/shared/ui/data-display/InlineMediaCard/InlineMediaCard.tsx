@@ -1,4 +1,5 @@
-import { Image, Link } from "@/shared/ui";
+import { Image } from "../../data-display";
+import { Link } from "../../navigation";
 
 export interface InlineMediaCardProps {
   /** URL of the album cover picture. */
