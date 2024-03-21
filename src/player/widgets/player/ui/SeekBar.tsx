@@ -1,4 +1,4 @@
-import { Slider } from "@/shared/ui";
+import { Slider } from "@/shared/ui/inputs";
 
 /**
  * Displays a seekbar for the currently playing track.

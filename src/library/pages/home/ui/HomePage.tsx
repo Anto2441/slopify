@@ -1,5 +1,6 @@
 import { SignOutButton } from "@/auth/features/sign-out";
-import { CardList, Link } from "@/shared/ui";
+import { Link } from "@/shared/ui/navigation";
+import { CardList } from "@/shared/ui/surfaces";
 
 export function HomePage() {
   return (

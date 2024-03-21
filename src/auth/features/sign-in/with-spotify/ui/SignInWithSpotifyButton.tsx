@@ -3,7 +3,7 @@
 import { FaSpotify } from "react-icons/fa6";
 
 import { signIn } from "@/auth/entities/session";
-import { Button } from "@/shared/ui";
+import { Button } from "@/shared/ui/inputs";
 
 interface SignInWithSpotifyButtonProps
   extends Pick<

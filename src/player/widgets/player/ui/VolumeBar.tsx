@@ -1,4 +1,4 @@
-import { Slider } from "@/shared/ui";
+import { Slider } from "@/shared/ui/inputs";
 
 /**
  * The VolumeBar component is a slider that allows the user to adjust the volume of the player.

@@ -15,7 +15,8 @@ import {
 import { PiRepeat } from "react-icons/pi";
 import { TbMicrophone2 } from "react-icons/tb";
 
-import { IconButton, InlineMediaCard } from "@/shared/ui";
+import { InlineMediaCard } from "@/shared/ui/data-display";
+import { IconButton } from "@/shared/ui/inputs";
 
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
