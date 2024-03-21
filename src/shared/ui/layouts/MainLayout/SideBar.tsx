@@ -90,10 +90,6 @@ export function SideBar() {
               Nous vous transmettrons des informations sur les nouveaux épisodes
             </span>
 
-            <Button className="mt-spacing-looser" variant="inverted-light">
-              Parcourir les podcasts
-            </Button>
-
             <Link
               className={buttonVariants({
                 className: "mt-spacing-looser",
