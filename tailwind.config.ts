@@ -4,19 +4,6 @@ const config = {
   content: ["./src/**/*.{ts,tsx}"],
 
   theme: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    containers: ({ theme }) => theme("screens"),
-    screens: {
-      xs: "530px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-      "3xl": "1640px",
-      "4xl": "1844px",
-    },
     extend: {
       borderRadius: {
         "border-radius-smaller": "var(--border-radius-smaller)",
@@ -140,10 +127,7 @@ const config = {
     },
   },
 
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/container-queries"),
-  ],
+  plugins: [require("@tailwindcss/forms")],
 } satisfies Config;
 
 export default config;
