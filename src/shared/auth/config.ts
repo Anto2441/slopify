@@ -21,6 +21,10 @@ export const nextAuthConfig: NextAuthOptions = {
       return token;
     },
 
+    async redirect({ baseUrl }) {
+      return baseUrl;
+    },
+
     async session({ session, token }) {
       session.accessToken = token.accessToken;
 
