@@ -29,6 +29,7 @@ export function NavBar() {
           </li>
         </ul>
       </nav>
+
       <nav>
         <ul className="flex items-center md:divide-x md:divide-decorative-base">
           <li className="hidden md:mr-spacing-base md:list-item">
