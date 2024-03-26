@@ -2,7 +2,7 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { HiEyeSlash } from "react-icons/hi2";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
-import { Input } from "./Input";
+import { TextField } from "./TextField";
 
 function renderInput({
   icon = undefined,
@@ -10,9 +10,9 @@ function renderInput({
   label = "Email or username",
   placeholder = "Enter your email",
   onChange = () => undefined,
-}: Partial<React.ComponentProps<typeof Input>> = {}) {
+}: Partial<React.ComponentProps<typeof TextField>> = {}) {
   render(
-    <Input
+    <TextField
       icon={icon}
       id={id}
       label={label}
