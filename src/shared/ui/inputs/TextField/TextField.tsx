@@ -1,4 +1,5 @@
 import { twJoin } from "tailwind-merge";
+import { Input } from "../Input/Input";
 
 interface TextFieldProps {
   icon?: React.ReactNode;
@@ -24,7 +25,7 @@ export function TextField({
       </label>
 
       <div className="relative mt-spacing-tighter-2 rounded shadow-sm">
-        <input
+        <Input
           type="text"
           name={id}
           id={id}
