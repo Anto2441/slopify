@@ -2,7 +2,7 @@
 
 import { HiEyeSlash } from "react-icons/hi2";
 
-import { Input, Label, Switch } from "@/shared/ui/inputs";
+import { Label, Switch, TextField } from "@/shared/ui/inputs";
 import { Link } from "@/shared/ui/navigation";
 
 import { useSignInWithCredentialsForm } from "../model/useSignInWithCredentialsForm";
@@ -16,7 +16,7 @@ export function SignInWithCredentialsForm() {
 
   return (
     <form action={signInAction} className="flex flex-col">
-      <Input
+      <TextField
         id="email"
         label="Email or username"
         placeholder="Email or username"
@@ -28,7 +28,7 @@ export function SignInWithCredentialsForm() {
         </p>
       )}
 
-      <Input
+      <TextField
         className="mt-spacing-base"
         icon={
           <HiEyeSlash

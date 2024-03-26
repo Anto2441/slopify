@@ -1,6 +1,6 @@
 import { twJoin } from "tailwind-merge";
 
-interface InputProps {
+interface TextFieldProps {
   icon?: React.ReactNode;
   id: string;
   label: string;
@@ -9,14 +9,14 @@ interface InputProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export function Input({
+export function TextField({
   icon,
   id,
   label,
   className,
   placeholder,
   onChange,
-}: InputProps) {
+}: TextFieldProps) {
   return (
     <div className={twJoin("text-color-base", className)}>
       <label htmlFor={id} className="block text-sm font-bold">
