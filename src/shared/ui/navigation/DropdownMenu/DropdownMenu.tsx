@@ -37,7 +37,7 @@ export const DropdownMenuContent = React.forwardRef<
         align={align}
         sideOffset={sideOffset}
         className={twJoin(
-          "min-w-[12.25rem] overflow-hidden rounded-border-radius-base bg-background-elevated-base p-spacing-tighter-4 text-color-base shadow-md",
+          "overflow-hidden rounded-border-radius-base bg-background-elevated-base p-spacing-tighter-4 text-color-base shadow-md",
           className,
         )}
         ref={ref}
@@ -54,15 +54,22 @@ export const DropdownMenuContent = React.forwardRef<
 export const DropdownMenuItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
+    checked?: boolean;
     inset?: boolean;
+    hasCheckbox?: boolean;
   }
->(function DropdownMenuItem({ className, inset, ...props }, ref) {
+>(function DropdownMenuItem(
+  { className, checked, inset, hasCheckbox, ...props },
+  ref,
+) {
   return (
     <DropdownMenuPrimitive.Item
       {...props}
       className={twJoin(
         "relative flex cursor-default select-none items-center rounded-border-radius-smaller py-spacing-tighter-2 pl-spacing-tighter pr-spacing-tighter-2 text-font-size-smaller outline-none focus:bg-background-tinted-highlight",
-        inset && "pl-spacing-looser-2",
+        checked && "text-color-bright-accent",
+        inset && "pl-spacing-tighter-2",
+        hasCheckbox && "justify-between",
         className,
       )}
       ref={ref}
@@ -86,6 +93,7 @@ export const DropdownMenuCheckboxItem = React.forwardRef<
       {...props}
       className={twJoin(
         "relative flex cursor-default select-none items-center rounded-border-radius-smaller py-spacing-tighter-3 pl-spacing-looser-2 pr-spacing-tighter-2 text-font-size-smaller outline-none focus:text-color-bright-accent",
+        checked && "text-color-bright-accent",
         className,
       )}
       checked={checked}
@@ -115,7 +123,7 @@ export const DropdownMenuLabel = React.forwardRef<
     <DropdownMenuPrimitive.Label
       {...props}
       className={twJoin(
-        "px-spacing-tighter-2 py-spacing-tighter-2 text-font-size-smaller",
+        "px-spacing-tighter-2 py-spacing-tighter-2 text-font-size-smaller-2 text-color-subdued",
         inset && "pl-spacing-looser-2",
         className,
       )}
