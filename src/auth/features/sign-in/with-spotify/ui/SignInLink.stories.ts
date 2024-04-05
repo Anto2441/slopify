@@ -1,10 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { NavBarConnected } from "./NavBarConnected";
+import { SignInLink } from "./SignInLink";
 
 const meta = {
-  component: NavBarConnected,
-} satisfies Meta<typeof NavBarConnected>;
+  args: {
+    children: "Log in",
+  },
+  component: SignInLink,
+} satisfies Meta<typeof SignInLink>;
 
 export default meta;
 

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { NavBar } from "./NavBar";
+import { SignUpBanner } from "./SignUpBanner";
 
 const meta = {
-  component: NavBar,
-} satisfies Meta<typeof NavBar>;
+  component: SignUpBanner,
+} satisfies Meta<typeof SignUpBanner>;
 
 export default meta;
 
