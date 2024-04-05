@@ -21,7 +21,7 @@ const meta = {
   args: {
     children: (
       <div className="flex items-center justify-center">
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger asChild>
           <IconButton size="small" tooltip="Settings" variant="accent">
             <TbLetterA />
           </IconButton>
