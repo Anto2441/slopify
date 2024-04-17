@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { HiOutlineArrowDownCircle } from "react-icons/hi2";
 
-import { buttonVariants } from "../../inputs/Button/Button";
+import { buttonVariants } from "../../inputs";
+
 import { Link } from "./Link";
 
 const meta = {

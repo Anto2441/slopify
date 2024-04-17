@@ -1,6 +1,6 @@
 import { SignInWithCredentialsForm } from "../../../features/sign-in/with-credentials";
 import { SignInWithSpotifyButton } from "../../../features/sign-in/with-spotify";
-import { SignUpPrompt } from "../../../features/sign-up";
+import { SignUpPrompt } from "../../../widgets/sign-up-prompt";
 
 /**
  * Renders the login page with a title, Oauth providers (only Spotify),

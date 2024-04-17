@@ -1,9 +1,9 @@
-import { TopBarCenteredCardLayout } from "@/shared/ui/layouts";
+import { HeaderCardFooterLayout } from "@/auth/layouts/header-card-footer";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return <TopBarCenteredCardLayout>{children}</TopBarCenteredCardLayout>;
+  return <HeaderCardFooterLayout>{children}</HeaderCardFooterLayout>;
 }

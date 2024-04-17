@@ -6,8 +6,6 @@ export interface InlineMediaCardProps {
   picture: string;
   /** Height and widthof the album cover picture. */
   pictureSize: number;
-  /** Whether the picture should have a rounded top or not. */
-  pictureTopRounded?: boolean;
   /** Artist name of the album. */
   subtitle: string;
   /** Title of the album. */
@@ -21,14 +19,13 @@ export function InlineMediaCard({
   subtitle,
   picture,
   pictureSize,
-  pictureTopRounded,
   title,
 }: InlineMediaCardProps) {
   return (
     <div className="flex items-center ">
       <Image
         alt="cover"
-        className={`mr-spacing-tighter-2 ${pictureTopRounded ? "rounded-t-md" : "rounded-md"}`}
+        className="mr-spacing-tighter-2 rounded-md"
         src={picture}
         height={pictureSize}
         width={pictureSize}
