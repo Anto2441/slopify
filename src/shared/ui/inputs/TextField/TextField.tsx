@@ -31,7 +31,7 @@ export function TextField({
           id={id}
           className={twJoin(
             "min-h-control-size-base font-semibold",
-            icon && "pr-[calc(24px+var(--spacing-tighter)*2)]",
+            Boolean(icon) && "pr-[calc(24px+var(--spacing-tighter)*2)]",
           )}
           placeholder={placeholder}
           onChange={onChange}
