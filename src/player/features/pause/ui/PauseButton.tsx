@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { HiPause } from "react-icons/hi2";
 
-import { IPlayer } from "@/player/entities/player";
+import type { IPlayer } from "@/player/entities/player";
 import { IconButton } from "@/shared/ui/inputs";
 
 interface PauseButtonProps {
