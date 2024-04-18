@@ -7,7 +7,6 @@ import {
   HiOutlineHeart,
   HiOutlineQueueList,
   HiOutlineSpeakerWave,
-  HiPlay,
 } from "react-icons/hi2";
 import { IoShuffle } from "react-icons/io5";
 import { LuMonitorSpeaker } from "react-icons/lu";
@@ -24,6 +23,7 @@ import { InlineMediaCard } from "@/shared/ui/surfaces";
 
 import { Player as AudioPlayer } from "../../../../player/entities/player";
 import { PauseButton } from "../../../../player/features/pause";
+import { PlayButton } from "../../../../player/features/play";
 
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
@@ -62,18 +62,7 @@ export const Player = observer(function Player() {
           {player.isPlaying ? (
             <PauseButton player={player} />
           ) : (
-            <IconButton
-              tooltip="Play"
-              size="small"
-              variant="inverted-light"
-              onClick={() =>
-                player.play(
-                  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-                )
-              }
-            >
-              <HiPlay />
-            </IconButton>
+            <PlayButton player={player} />
           )}
 
           <IconButton tooltip="Next">
