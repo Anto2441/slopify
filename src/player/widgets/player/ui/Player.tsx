@@ -1,8 +1,13 @@
+"use client";
+
+import { observer } from "mobx-react-lite";
+import React from "react";
 import { CgMiniPlayer, CgPlayButtonR } from "react-icons/cg";
 import {
   HiOutlineHeart,
   HiOutlineQueueList,
   HiOutlineSpeakerWave,
+  HiPause,
   HiPlay,
 } from "react-icons/hi2";
 import { IoShuffle } from "react-icons/io5";
@@ -18,13 +23,16 @@ import { TbMicrophone2 } from "react-icons/tb";
 import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
+import { Player as AudioPlayer } from "../../../../player/entities/player";
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
 /**
  * Renders the Player component.
  */
-export function Player() {
+export const Player = observer(function Player() {
+  const [player] = React.useState(() => new AudioPlayer());
+
   return (
     <footer className="flex items-center justify-between gap-spacing-base">
       <div className="flex flex-1 items-center">
@@ -50,9 +58,29 @@ export function Player() {
             <MdSkipPrevious />
           </IconButton>
 
-          <IconButton tooltip="Play" size="small" variant="inverted-light">
-            <HiPlay />
-          </IconButton>
+          {player.isPlaying ? (
+            <IconButton
+              tooltip="Pause"
+              size="small"
+              variant="inverted-light"
+              onClick={() => player.pause()}
+            >
+              <HiPause />
+            </IconButton>
+          ) : (
+            <IconButton
+              tooltip="Play"
+              size="small"
+              variant="inverted-light"
+              onClick={() =>
+                player.play(
+                  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                )
+              }
+            >
+              <HiPlay />
+            </IconButton>
+          )}
 
           <IconButton tooltip="Next">
             <MdSkipNext />
@@ -101,4 +129,4 @@ export function Player() {
       </div>
     </footer>
   );
-}
+});
