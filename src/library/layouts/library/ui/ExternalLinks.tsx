@@ -11,7 +11,7 @@ export function ExternalLinks() {
     <footer className="flex flex-col px-spacing-looser pb-spacing-looser-4 pt-spacing-looser-5">
       <div className="grid w-full gap-spacing-tighter space-y-spacing-base lg:mb-0 lg:mr-spacing-looser lg:grid-cols-4 lg:space-y-0">
         <nav>
-          <p className="font-bold">Société</p>
+          <p className="font-bold">Company</p>
           <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2">
             <li>
               <Link href="#" underline="hover" target="_blank" variant="muted">
@@ -32,7 +32,7 @@ export function ExternalLinks() {
         </nav>
 
         <nav>
-          <p className="font-bold">Communautés</p>
+          <p className="font-bold">Communities</p>
           <ul className="mt-spacing-tighter-2 flex w-9/12 flex-col space-y-spacing-tighter-2">
             <li>
               <Link href="#" underline="hover" target="_blank" variant="muted">
