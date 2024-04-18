@@ -7,7 +7,6 @@ import {
   HiOutlineHeart,
   HiOutlineQueueList,
   HiOutlineSpeakerWave,
-  HiPause,
   HiPlay,
 } from "react-icons/hi2";
 import { IoShuffle } from "react-icons/io5";
@@ -24,6 +23,8 @@ import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
 import { Player as AudioPlayer } from "../../../../player/entities/player";
+import { PauseButton } from "../../../../player/features/pause";
+
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
@@ -59,14 +60,7 @@ export const Player = observer(function Player() {
           </IconButton>
 
           {player.isPlaying ? (
-            <IconButton
-              tooltip="Pause"
-              size="small"
-              variant="inverted-light"
-              onClick={() => player.pause()}
-            >
-              <HiPause />
-            </IconButton>
+            <PauseButton player={player} />
           ) : (
             <IconButton
               tooltip="Play"
