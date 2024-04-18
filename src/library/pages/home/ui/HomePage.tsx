@@ -1,3 +1,9 @@
+import { Suspense } from "react";
+
+import { SignOutButton } from "@/auth/features/sign-out";
+import { FollowedArtists } from "@/library/features/get-followed-artists";
+import { Profil } from "@/library/features/get-profil";
+import { UserPlaylists } from "@/library/features/get-user-playlists";
 import { Link } from "@/shared/ui/navigation";
 import { CardList } from "@/shared/ui/surfaces";
 
@@ -22,6 +28,21 @@ export function HomePage() {
       </div>
 
       <CardList />
+
+      <Suspense fallback={<div>Loading user...</div>}>
+        <Profil />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading followed artists...</div>}>
+        <FollowedArtists />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading user playlists...</div>}>
+        <UserPlaylists />
+      </Suspense>
+
+      {/* TODO: remove it, just for development purpose */}
+      <SignOutButton size="large" variant="inverted-light" />
     </main>
   );
 }
