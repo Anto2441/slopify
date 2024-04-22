@@ -3,6 +3,7 @@
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import * as React from "react";
 import { twJoin } from "tailwind-merge";
+
 import { disabledInput } from "../../utils";
 
 /**
@@ -28,7 +29,9 @@ export const Slider = React.forwardRef<
       <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-essential-subdued">
         <SliderPrimitive.Range className="absolute h-full rounded-full bg-color-base group-hover:bg-color-bright-accent" />
       </SliderPrimitive.Track>
+
       <SliderPrimitive.Thumb
+        aria-label="Slider’s thumb"
         className={twJoin(
           "block h-4 w-4 cursor-pointer rounded-full bg-color-base opacity-0 shadow transition-colors focus-visible:outline-none focus-visible:ring-1 group-hover:opacity-100",
           disabledInput(),
