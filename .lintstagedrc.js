@@ -28,7 +28,7 @@ function test(filenames) {
 export default {
   "**/*": "pnpm lint:secrets",
   "**/*.{json,js,jsx,md,ts,tsx}": "pnpm format --check",
-  "**/*.(ts,tsx)": "pnpm lint:types",
+  "**/*.{ts,tsx}": "pnpm lint:types",
   "**/*.{ts,tsx}": lint,
   "**/*.{ts,tsx}": test,
 };
