@@ -66,11 +66,9 @@ export async function TopBar() {
             </li>
 
             <li>
-              <Link href="#">
-                <IconButton size="small" tooltip="news" variant="over-media">
-                  <GoBell />
-                </IconButton>
-              </Link>
+              <IconButton size="small" tooltip="news" variant="over-media">
+                <GoBell />
+              </IconButton>
             </li>
 
             <li>{session.user && <UserDropdownMenu user={session.user} />}</li>
