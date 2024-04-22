@@ -73,9 +73,7 @@ export async function TopBar() {
               </Link>
             </li>
 
-            <li>
-              <UserDropdownMenu />
-            </li>
+            <li>{session.user && <UserDropdownMenu user={session.user} />}</li>
           </ul>
         )}
 
