@@ -42,7 +42,7 @@ type IconButtonProps = React.ComponentPropsWithoutRef<"button"> &
     /**
      * The text content of the tooltip displayed on hover. It is mandatory for accessibility reasons.
      */
-    tooltip: React.ReactNode;
+    tooltip: string;
   };
 
 /**
@@ -58,6 +58,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         <TooltipTrigger asChild>
           <button
             {...props}
+            aria-label={tooltip}
             className={iconButtonVariants({
               className,
               disabled: props.disabled,
