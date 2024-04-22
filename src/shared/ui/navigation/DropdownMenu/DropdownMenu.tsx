@@ -1,7 +1,7 @@
 "use client";
 
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import * as React from "react";
+import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import { twJoin } from "tailwind-merge";
 
@@ -17,7 +17,12 @@ export const DropdownMenu = DropdownMenuPrimitive.Root;
  * This component should be used as a trigger for the dropdown menu. When
  * clicked, it will open the dropdown menu.
  */
-export const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+export const DropdownMenuTrigger = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Trigger>
+>(function DropdownMenuTrigger(props, ref) {
+  return <DropdownMenuPrimitive.Trigger {...props} ref={ref} />;
+});
 
 /**
  * Component that displays the dropdown menu content.

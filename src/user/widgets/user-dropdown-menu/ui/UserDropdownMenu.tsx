@@ -1,5 +1,5 @@
+import { Suspense } from "react";
 import { GoLinkExternal } from "react-icons/go";
-import { TbLetterA } from "react-icons/tb";
 
 import { SignOutDropdownItem } from "@/auth/features/sign-out";
 import {
@@ -7,57 +7,65 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
   Link,
 } from "@/shared/ui/navigation";
 
-export function UserDropdownMenu() {
+import { MenuTrigger } from "./MenuTrigger";
+import { UserFirstLetter } from "./UserFirstLetter";
+
+interface UserDropdownMenuProps {
+  /** The user. */
+  user: {
+    /** The user's name. */
+    name?: string | null;
+  };
+}
+
+/**
+ * A component that displays a dropdown menu with user-related actions.
+ */
+export function UserDropdownMenu({ user }: UserDropdownMenuProps) {
   return (
     <DropdownMenu>
-      <div className="flex items-center justify-center">
-        <DropdownMenuTrigger asChild>
-          {/* <IconButton size="small" tooltip="Settings" variant="accent">
-            <TbLetterA />
-          </IconButton> */}
-          <button type="button">
-            <TbLetterA />
-          </button>
-        </DropdownMenuTrigger>
+      <MenuTrigger>
+        <Suspense>
+          {user.name && <UserFirstLetter username={user.name} />}
+        </Suspense>
+      </MenuTrigger>
 
-        <DropdownMenuContent className="min-w-[12.25rem]">
-          <DropdownMenuItem>
-            <Link
-              href="#"
-              className="flex w-full items-center justify-between gap-spacing-tighter"
-            >
-              Account
-              <GoLinkExternal />
-            </Link>
-          </DropdownMenuItem>
+      <DropdownMenuContent className="min-w-[12.25rem]">
+        <DropdownMenuItem>
+          <Link
+            href="#"
+            className="flex w-full items-center justify-between gap-spacing-tighter"
+          >
+            Account
+            <GoLinkExternal />
+          </Link>
+        </DropdownMenuItem>
 
-          <DropdownMenuItem>
-            <Link href="#">Profile</Link>
-          </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="#">Profile</Link>
+        </DropdownMenuItem>
 
-          <DropdownMenuItem>
-            <Link
-              href="#"
-              className="flex w-full items-center justify-between gap-spacing-tighter"
-            >
-              Go to Premium
-              <GoLinkExternal />
-            </Link>
-          </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link
+            href="#"
+            className="flex w-full items-center justify-between gap-spacing-tighter"
+          >
+            Go to Premium
+            <GoLinkExternal />
+          </Link>
+        </DropdownMenuItem>
 
-          <DropdownMenuItem>
-            <Link href="#">Settings</Link>
-          </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="#">Settings</Link>
+        </DropdownMenuItem>
 
-          <DropdownMenuSeparator />
+        <DropdownMenuSeparator />
 
-          <SignOutDropdownItem />
-        </DropdownMenuContent>
-      </div>
+        <SignOutDropdownItem />
+      </DropdownMenuContent>
     </DropdownMenu>
   );
 }
