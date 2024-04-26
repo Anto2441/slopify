@@ -4,9 +4,9 @@ import { Paper } from "@/shared/ui/surfaces";
 
 import { PlayerProvider } from "@/player/entities/player";
 
+import { SideBar } from "../../../widgets/sidebar";
 import { ExternalLinks } from "./ExternalLinks";
 import { Footer } from "./Footer";
-import { SideBar } from "./SideBar";
 import { TopBar } from "./TopBar";
 
 interface LibraryLayoutProps {

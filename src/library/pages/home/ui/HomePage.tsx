@@ -1,3 +1,6 @@
+import { Suspense } from "react";
+
+import { FollowedArtists } from "@/library/features/get-followed-artists";
 import { Link } from "@/shared/ui/navigation";
 import { CardList } from "@/shared/ui/surfaces";
 
@@ -22,6 +25,10 @@ export function HomePage() {
       </div>
 
       <CardList />
+
+      <Suspense fallback={<div>Loading followed artists...</div>}>
+        <FollowedArtists />
+      </Suspense>
     </main>
   );
 }

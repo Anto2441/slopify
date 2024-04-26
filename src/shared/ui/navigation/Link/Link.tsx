@@ -20,6 +20,7 @@ const linkVariants = cva({
 
     variant: {
       base: ``,
+      active: `hover:bg-background-tinted-base active:bg-background-tinted-base`,
       inherit: ``,
       muted: `text-color-subdued hover:text-color-base`,
     },

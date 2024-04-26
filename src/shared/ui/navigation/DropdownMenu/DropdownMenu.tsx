@@ -25,6 +25,20 @@ export const DropdownMenuTrigger = React.forwardRef<
 });
 
 /**
+ * Component that groups multiple `DropdownMenuRadioItem`s together and allows
+ * one item to be selected at a time.
+ *
+ * This component should be used as a container for the items in the dropdown
+ * menu. When one of the items is selected, the others will be deselected.
+ */
+export const DropdownMenuRadioGroup = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.RadioGroup>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioGroup>
+>(function DropdownMenuRadioGroup(props, ref) {
+  return <DropdownMenuPrimitive.RadioGroup {...props} ref={ref} />;
+});
+
+/**
  * Component that displays the dropdown menu content.
  * This component is opened when the `DropdownMenuTrigger` is clicked.
  */
@@ -111,6 +125,33 @@ export const DropdownMenuCheckboxItem = React.forwardRef<
       </span>
       {children}
     </DropdownMenuPrimitive.CheckboxItem>
+  );
+});
+
+/**
+ * Component that renders a single radio item in the dropdown menu.
+ * This component should be used as a child of `DropdownMenuContent`.
+ */
+export const DropdownMenuRadioItem = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
+>(function DropdownMenuRadioItem({ className, children, ...props }, ref) {
+  return (
+    <DropdownMenuPrimitive.RadioItem
+      ref={ref}
+      className={twJoin(
+        "relative flex cursor-default select-none items-center rounded-border-radius-smaller py-spacing-tighter-3 pl-spacing-tighter pr-spacing-tighter-2 text-font-size-smaller outline-none focus:bg-background-tinted-highlight [&[data-state='checked']]:text-color-bright-accent",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+      <span className="absolute right-spacing-looser flex h-spacing-base w-spacing-base items-center justify-center">
+        <DropdownMenuPrimitive.ItemIndicator>
+          <IoMdCheckmark className="h-spacing-base w-spacing-base" />
+        </DropdownMenuPrimitive.ItemIndicator>
+      </span>
+    </DropdownMenuPrimitive.RadioItem>
   );
 });
 
