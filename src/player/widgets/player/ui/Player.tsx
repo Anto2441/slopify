@@ -1,7 +1,3 @@
-"use client";
-
-import { observer } from "mobx-react-lite";
-import React from "react";
 import { CgMiniPlayer, CgPlayButtonR } from "react-icons/cg";
 import {
   HiOutlineHeart,
@@ -21,19 +17,14 @@ import { TbMicrophone2 } from "react-icons/tb";
 import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
-import { Player as AudioPlayer } from "../../../../player/entities/player";
-import { PauseButton } from "../../../../player/features/pause";
-import { PlayButton } from "../../../../player/features/play";
-
+import { PlayPauseButton } from "./PlayPauseButton";
 import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
 /**
  * Renders the Player component.
  */
-export const Player = observer(function Player() {
-  const [player] = React.useState(() => new AudioPlayer());
-
+export function Player() {
   return (
     <footer className="flex items-center justify-between gap-spacing-base">
       <div className="flex flex-1 items-center">
@@ -59,11 +50,7 @@ export const Player = observer(function Player() {
             <MdSkipPrevious />
           </IconButton>
 
-          {player.isPlaying ? (
-            <PauseButton player={player} />
-          ) : (
-            <PlayButton player={player} />
-          )}
+          <PlayPauseButton src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
 
           <IconButton tooltip="Next">
             <MdSkipNext />
@@ -112,4 +99,4 @@ export const Player = observer(function Player() {
       </div>
     </footer>
   );
-});
+}
