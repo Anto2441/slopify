@@ -16,13 +16,17 @@ export class HowlerAudioManager implements IAudioManager {
   }
 
   play(src: string) {
-    if (this.howl) {
-      this.howl.play();
+    if (this.isPlaying) {
       return;
+    }
+
+    if (this.howl) {
+      this.howl.unload();
     }
 
     this.howl = new Howl({
       src,
+
       html5: true,
 
       onplay: action(() => {
@@ -33,5 +37,7 @@ export class HowlerAudioManager implements IAudioManager {
         this.isPlaying = false;
       }),
     });
+
+    this.howl.play();
   }
 }

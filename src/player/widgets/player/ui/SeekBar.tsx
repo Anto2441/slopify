@@ -1,7 +1,7 @@
 import { Slider } from "@/shared/ui/inputs";
 
 /**
- * Displays a seekbar for the currently playing track.
+ * Displays a seekbar for the currently playing song.
  */
 export function Seekbar() {
   return (

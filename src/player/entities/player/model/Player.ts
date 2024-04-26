@@ -1,23 +1,23 @@
-import { action, computed, makeObservable } from "mobx";
+import { makeAutoObservable } from "mobx";
 
 import { AudioManager, type IAudioManager } from "../../../lib/audio-manager";
 import type { IPlayer } from "./IPlayer";
 
-interface PlayerDeps {
+export interface PlayerDeps {
+  /** Audio manager used to play audio */
   audioManager: IAudioManager;
 }
 
+/**
+ * Player entity
+ */
 export class Player implements IPlayer {
   constructor(
     private readonly deps: Readonly<PlayerDeps> = {
       audioManager: new AudioManager(),
     },
   ) {
-    makeObservable(this, {
-      isPlaying: computed,
-      pause: action,
-      play: action,
-    });
+    makeAutoObservable(this);
   }
 
   get isPlaying() {
