@@ -25,4 +25,8 @@ export class InMemoryAudioManager implements IAudioManager {
   play() {
     this.isPlaying = true;
   }
+
+  seek(): void {
+    // Do nothing
+  }
 }

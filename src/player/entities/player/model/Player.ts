@@ -20,8 +20,23 @@ export class Player implements IPlayer {
     makeAutoObservable(this);
   }
 
+  get currentTime() {
+    return this.deps.audioManager.currentTime;
+  }
+
+  get duration() {
+    return this.deps.audioManager.duration;
+  }
+
   get isPlaying() {
     return this.deps.audioManager.isPlaying;
+  }
+
+  get progression() {
+    return this.deps.audioManager.duration
+      ? (this.deps.audioManager.currentTime / this.deps.audioManager.duration) *
+          100
+      : 0;
   }
 
   pause() {
@@ -30,5 +45,9 @@ export class Player implements IPlayer {
 
   play(src: string) {
     this.deps.audioManager.play(src);
+  }
+
+  seek(position: number) {
+    this.deps.audioManager.seek(position);
   }
 }
