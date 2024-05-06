@@ -17,8 +17,8 @@ import { TbMicrophone2 } from "react-icons/tb";
 import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
+import { Seekbar } from "../../../features/seek/ui/SeekBar";
 import { PlayPauseButton } from "./PlayPauseButton";
-import { Seekbar } from "./SeekBar";
 import { VolumeBar } from "./VolumeBar";
 
 /**
@@ -50,7 +50,7 @@ export function Player() {
             <MdSkipPrevious />
           </IconButton>
 
-          <PlayPauseButton src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+          <PlayPauseButton src="https://p.scdn.co/mp3-preview/ecc6383aac4b3f4240ae699324573e61c39e6aaf?cid=cfe923b2d660439caf2b557b21f31221" />
 
           <IconButton tooltip="Next">
             <MdSkipNext />
