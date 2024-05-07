@@ -2,15 +2,16 @@ import { describe, expect, test } from "vitest";
 
 import { Player } from "@/player/entities/player";
 import { InMemoryAudioManager } from "@/player/lib/audio-manager";
-import { SeekFeature } from "./SeekFeature";
+import { scaleVolumeToUnitRange } from "../utils/ScaleVolume";
+import { VolumeFeature } from "./VolumeFeature";
 
 describe("SeekFeature", () => {
-  test("should seek the song", () => {
+  test("should change the volume", () => {
     const currentTime = 10;
     const currentVolume = 0.5;
     const songDuration = 260;
-    const seekPosition = 33;
-    const expectedTime = 85.8;
+    const volumePosition = 70;
+    const expectedVolume = 0.7;
 
     const player = new Player({
       audioManager: new InMemoryAudioManager(
@@ -20,12 +21,12 @@ describe("SeekFeature", () => {
         false,
       ),
     });
-    const seekFeature = new SeekFeature({ player });
+    const volumeFeature = new VolumeFeature({ player });
 
-    expect(player.currentTime).toBe(10);
+    expect(player.currentVolume).toBe(0.5);
 
-    seekFeature.execute(seekPosition);
+    volumeFeature.execute(volumePosition);
 
-    expect(player.currentTime).toBe(expectedTime);
+    expect(scaleVolumeToUnitRange(player.currentVolume)).toBe(expectedVolume);
   });
 });

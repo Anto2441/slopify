@@ -24,6 +24,10 @@ export class Player implements IPlayer {
     return this.deps.audioManager.currentTime;
   }
 
+  get currentVolume() {
+    return this.deps.audioManager.currentVolume;
+  }
+
   get duration() {
     return this.deps.audioManager.duration;
   }
@@ -49,5 +53,9 @@ export class Player implements IPlayer {
 
   seek(position: number) {
     this.deps.audioManager.seek(position);
+  }
+
+  volume(volume: number) {
+    this.deps.audioManager.volume(volume);
   }
 }

@@ -14,6 +14,7 @@ import { IAudioManager } from "./IAudioManager";
 export class InMemoryAudioManager implements IAudioManager {
   constructor(
     public currentTime = 0,
+    public currentVolume = 0,
     public duration = 0,
     public isPlaying = false,
   ) {
@@ -30,5 +31,9 @@ export class InMemoryAudioManager implements IAudioManager {
 
   seek(position: number) {
     this.currentTime = position;
+  }
+
+  volume(volume: number): void {
+    this.currentVolume = volume;
   }
 }

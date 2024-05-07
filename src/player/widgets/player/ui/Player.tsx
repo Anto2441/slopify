@@ -18,8 +18,8 @@ import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
 import { Seekbar } from "../../../features/seek/ui/SeekBar";
+import { VolumeBar } from "../../../features/volume/ui/VolumeBar";
 import { PlayPauseButton } from "./PlayPauseButton";
-import { VolumeBar } from "./VolumeBar";
 
 /**
  * Renders the Player component.
