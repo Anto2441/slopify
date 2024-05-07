@@ -4,11 +4,13 @@ import { action, makeAutoObservable } from "mobx";
 import { IAudioManager } from "./IAudioManager";
 
 export class HowlerAudioManager implements IAudioManager {
-  isPlaying: boolean = false;
-  duration: number | undefined = 0;
+  isPlaying = false;
+
+  duration = 0;
+
   currentTime = 0;
 
-  private animationFrameId: number | undefined = undefined;
+  private requestTimeId: number | undefined = undefined;
 
   private howl?: Howl = undefined;
 
@@ -38,57 +40,52 @@ export class HowlerAudioManager implements IAudioManager {
       volume: 0.1,
 
       onload: action(() => {
-        this.duration = this.howl?.duration();
+        this.duration = Number(this.howl?.duration().toFixed(0)) || 0;
       }),
 
       onplay: action(() => {
         this.isPlaying = true;
 
-        this.animationFrameId = requestAnimationFrame(() =>
-          this.getCurrentTime(),
-        );
-        console.log("play", this.animationFrameId);
+        this.requestCurrentTime();
       }),
 
       onpause: action(() => {
         this.isPlaying = false;
 
-        if (this.animationFrameId) {
-          console.log("pause", this.animationFrameId);
-          cancelAnimationFrame(this.animationFrameId);
-        }
+        this.cancelRequestCurrentTime();
       }),
 
-      // onseek: action(() => {
-      //   console.log("onseek", this.getCurrentTime());
-      //   this.currentTime = this.getCurrentTime();
-      // }),
+      onend: action(() => {
+        this.isPlaying = false;
+
+        this.cancelRequestCurrentTime();
+      }),
+
+      onseek: action(() => {
+        this.currentTime = this.getCurrentTime();
+      }),
     });
 
     this.howl.play();
   }
 
   seek(position: number) {
-    if (this.howl) {
-      this.howl.seek(position);
-      return position; // Return the seek position as the current playback time
-    }
-    return 0;
+    this.howl?.seek(position);
   }
 
   private getCurrentTime() {
-    // if (this.howl) {
-    //   return this.howl.seek();
-    // }
-    // return 0;
+    return Number(this.howl?.seek().toFixed(0)) || 0;
+  }
 
-    console.log("getCurrentTime");
-
-    this.currentTime = Number(this.howl?.seek().toFixed(0)) || 0;
-
-    if (this.animationFrameId) {
-      cancelAnimationFrame(this.animationFrameId);
+  private cancelRequestCurrentTime() {
+    if (this.requestTimeId) {
+      cancelAnimationFrame(this.requestTimeId);
     }
-    this.animationFrameId = requestAnimationFrame(() => this.getCurrentTime());
+  }
+
+  private requestCurrentTime() {
+    this.currentTime = this.getCurrentTime();
+
+    this.requestTimeId = requestAnimationFrame(() => this.requestCurrentTime());
   }
 }

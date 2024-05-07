@@ -6,10 +6,13 @@ interface PlayFeatureDeps {
   /** The player to seek. */
   player: IPlayer;
 }
+
 export class SeekFeature implements ISeekFeature {
   constructor(private readonly deps: PlayFeatureDeps) {}
 
-  execute(progression: number) {
-    this.deps.player.seek(progression);
+  execute(progress: number) {
+    const position = (progress / 100) * (this.deps.player.duration || 0);
+
+    this.deps.player.seek(position);
   }
 }
