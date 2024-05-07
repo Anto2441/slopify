@@ -12,9 +12,11 @@ import { IAudioManager } from "./IAudioManager";
  * testing and quick prototyping purposes.
  */
 export class InMemoryAudioManager implements IAudioManager {
-  isPlaying = false;
-
-  constructor() {
+  constructor(
+    public currentTime = 0,
+    public duration = 0,
+    public isPlaying = false,
+  ) {
     makeAutoObservable(this);
   }
 
@@ -26,7 +28,7 @@ export class InMemoryAudioManager implements IAudioManager {
     this.isPlaying = true;
   }
 
-  seek(): void {
-    // Do nothing
+  seek(position: number) {
+    this.currentTime = position;
   }
 }

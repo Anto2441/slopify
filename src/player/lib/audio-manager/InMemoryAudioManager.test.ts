@@ -27,4 +27,14 @@ describe("InMemoryAudioManager", () => {
 
     expect(audioManager.isPlaying).toBe(false);
   });
+
+  test("can seek a song", () => {
+    audioManager.play("https://www.example.com/path/to/song.mp3");
+
+    expect(audioManager.currentTime).toBe(0);
+
+    audioManager.seek(33);
+
+    expect(audioManager.currentTime).toBe(33);
+  });
 });

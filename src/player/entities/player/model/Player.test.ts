@@ -33,7 +33,7 @@ describe("Player", () => {
   });
 
   test("can pause a song", () => {
-    const spyAudioManagerPause = vi.spyOn(audioManager, "play");
+    const spyAudioManagerPlay = vi.spyOn(audioManager, "play");
 
     player.play("https://www.example.com/path/to/song.mp3");
 
@@ -43,6 +43,19 @@ describe("Player", () => {
 
     expect(player.isPlaying).toBe(false);
 
-    expect(spyAudioManagerPause).toBeCalledTimes(1);
+    expect(spyAudioManagerPlay).toBeCalledTimes(1);
+  });
+
+  test("can seek in a song", () => {
+    const spyAudioManagerSeek = vi.spyOn(audioManager, "seek");
+
+    expect(player.currentTime).toBe(0);
+
+    player.seek(10);
+
+    expect(player.currentTime).toBe(10);
+
+    expect(spyAudioManagerSeek).toBeCalledTimes(1);
+    expect(spyAudioManagerSeek).toBeCalledWith(10);
   });
 });
