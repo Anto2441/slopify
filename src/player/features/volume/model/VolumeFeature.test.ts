@@ -2,9 +2,9 @@ import { describe, expect, test } from "vitest";
 
 import { Player } from "@/player/entities/player";
 import { InMemoryAudioManager } from "@/player/lib/audio-manager";
-import { scaleVolumeToUnitRange } from "../utils/ScaleVolume";
 import { VolumeFeature } from "./VolumeFeature";
 
+// TODO: improve setup
 describe("SeekFeature", () => {
   test("should change the volume", () => {
     const currentTime = 10;
@@ -27,6 +27,6 @@ describe("SeekFeature", () => {
 
     volumeFeature.execute(volumePosition);
 
-    expect(scaleVolumeToUnitRange(player.currentVolume)).toBe(expectedVolume);
+    expect(player.currentVolume).toBe(expectedVolume);
   });
 });

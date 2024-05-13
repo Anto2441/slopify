@@ -6,7 +6,7 @@ import React from "react";
 import { usePlayer } from "@/player/entities/player";
 import { Slider } from "@/shared/ui/inputs";
 import { VolumeFeature } from "../model/VolumeFeature";
-import { scaleVolumeToUnitRange } from "../utils/ScaleVolume";
+import { convertVolumeToPercentage } from "../utils/ScaleVolume";
 
 /**
  * The VolumeBar component is a slider that allows the user to adjust the volume of the player.
@@ -14,13 +14,12 @@ import { scaleVolumeToUnitRange } from "../utils/ScaleVolume";
 export const VolumeBar = observer(function VolumeBar() {
   const player = usePlayer();
   const [volumeFeature] = React.useState(() => new VolumeFeature({ player }));
-  const defaultVolume = 25;
 
   return (
     <Slider
-      defaultValue={[defaultVolume]}
+      value={[convertVolumeToPercentage(player.currentVolume)]}
       onValueChange={([volume]) => {
-        volumeFeature.execute(scaleVolumeToUnitRange(volume));
+        volumeFeature.execute(volume);
       }}
     />
   );
