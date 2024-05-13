@@ -10,7 +10,7 @@ export class HowlerAudioManager implements IAudioManager {
 
   currentTime = 0;
 
-  currentVolume = 0;
+  currentVolume = 0.25;
 
   private requestTimeId: number | undefined = undefined;
 
@@ -70,7 +70,7 @@ export class HowlerAudioManager implements IAudioManager {
       onvolume: action(() => {
         const volume = this.howl?.volume();
 
-        this.currentVolume = typeof volume === "number" ? volume : 0;
+        this.currentVolume = volume ?? 0;
       }),
     });
 

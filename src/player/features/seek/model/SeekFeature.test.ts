@@ -4,6 +4,7 @@ import { Player } from "@/player/entities/player";
 import { InMemoryAudioManager } from "@/player/lib/audio-manager";
 import { SeekFeature } from "./SeekFeature";
 
+// TODO: improve setup
 describe("SeekFeature", () => {
   test("should seek the song", () => {
     const currentTime = 10;
