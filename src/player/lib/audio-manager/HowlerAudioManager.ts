@@ -4,6 +4,8 @@ import { action, makeAutoObservable } from "mobx";
 import { IAudioManager } from "./IAudioManager";
 
 export class HowlerAudioManager implements IAudioManager {
+  isLooping = false;
+
   isPlaying = false;
 
   duration = 0;
@@ -18,6 +20,12 @@ export class HowlerAudioManager implements IAudioManager {
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  loop(repeat: boolean) {
+    this.isLooping = repeat;
+
+    this.howl?.loop(repeat);
   }
 
   pause() {
@@ -39,7 +47,7 @@ export class HowlerAudioManager implements IAudioManager {
 
       html5: true,
 
-      volume: 0.2,
+      volume: 0.1,
 
       onload: action(() => {
         this.duration = Number(this.howl?.duration().toFixed(0)) || 0;

@@ -16,9 +16,14 @@ export class InMemoryAudioManager implements IAudioManager {
     public currentTime = 0,
     public currentVolume = 0,
     public duration = 0,
+    public isLooping = false,
     public isPlaying = false,
   ) {
     makeAutoObservable(this);
+  }
+
+  loop(repeat: boolean) {
+    this.isLooping = repeat;
   }
 
   pause() {
