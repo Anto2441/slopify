@@ -32,6 +32,10 @@ export class Player implements IPlayer {
     return this.deps.audioManager.duration;
   }
 
+  get isLooping() {
+    return this.deps.audioManager.isLooping;
+  }
+
   get isPlaying() {
     return this.deps.audioManager.isPlaying;
   }
@@ -41,6 +45,10 @@ export class Player implements IPlayer {
       ? (this.deps.audioManager.currentTime / this.deps.audioManager.duration) *
           100
       : 0;
+  }
+
+  loop(repeat: boolean) {
+    this.deps.audioManager.loop(repeat);
   }
 
   pause() {

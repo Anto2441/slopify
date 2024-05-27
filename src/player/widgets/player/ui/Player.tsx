@@ -11,12 +11,12 @@ import {
   MdSkipNext,
   MdSkipPrevious,
 } from "react-icons/md";
-import { PiRepeat } from "react-icons/pi";
 import { TbMicrophone2 } from "react-icons/tb";
 
 import { IconButton } from "@/shared/ui/inputs";
 import { InlineMediaCard } from "@/shared/ui/surfaces";
 
+import { LoopButton } from "../../../features/loop/ui/LoopButton";
 import { Seekbar } from "../../../features/seek/ui/SeekBar";
 import { VolumeBar } from "../../../features/volume/ui/VolumeBar";
 import { PlayPauseButton } from "./PlayPauseButton";
@@ -56,9 +56,7 @@ export function Player() {
             <MdSkipNext />
           </IconButton>
 
-          <IconButton tooltip="Repeat" size="small">
-            <PiRepeat />
-          </IconButton>
+          <LoopButton />
         </div>
 
         <Seekbar />

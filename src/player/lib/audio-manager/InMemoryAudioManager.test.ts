@@ -37,4 +37,16 @@ describe("InMemoryAudioManager", () => {
 
     expect(audioManager.currentTime).toBe(33);
   });
+
+  test("can loop a song", () => {
+    expect(audioManager.isLooping).toBe(false);
+
+    audioManager.loop(true);
+
+    expect(audioManager.isLooping).toBe(true);
+
+    audioManager.loop(false);
+
+    expect(audioManager.isLooping).toBe(false);
+  });
 });
